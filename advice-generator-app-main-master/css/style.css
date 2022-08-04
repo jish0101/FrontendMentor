@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Manrope', sans-serif;
+    height: 100%;
+    width: 100%;
+    background-color: #202632;
+}
+h5{
+    padding: 1.5rem;
+    letter-spacing: 3px;
+    color: #53ffab;
+    font-size: 12px;
+}
+
+p{
+    font-size: 24px; 
+    color: hsl(193 38% 86%);
+}
+
+.container{
+    border-radius: .5em;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    max-width: 90%;
+    padding: 1rem 1rem;
+    margin: 20vh auto;
+    max-height: 20rem;
+    background-color: #313a49 ;
+}
+@media screen and (min-width: 820px) {
+    .container{
+        max-width: 33%;
+        border-radius: 1rem;
+        padding: 1rem 2rem;
+        margin: 30vh auto;
+    }
+}
+
+.svg{
+    padding: 1.5rem 0;
+    height: 6rem;
+}
+.btn{
+    padding: 1.1rem;
+    border-radius: 100%;
+    border: none;
+    background-color: #53ffab;
+    cursor: pointer;
+    position: absolute;
+    bottom: -2rem;
+}
+
+
+button:hover{
+    box-shadow: 0 0 2rem #53ffab;
+}

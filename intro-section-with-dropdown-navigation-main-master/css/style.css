@@ -1,0 +1,359 @@
+:root {
+    --primary: hsl(0, 0%, 98%);
+    --secondary: hsl(0, 0%, 41%);
+    --black: hsl(0, 0%, 8%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Epilogue', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    color: var(--secondary);
+}
+
+h1{
+    color: var(--black);
+    font-size: 5rem;
+    font-weight: 700;
+    padding-bottom: 3rem;
+}
+
+
+p{
+    line-height: 1.5;
+    padding-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+/* NAVIGATION  AND HEADER*/
+
+a{
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 1rem;
+}
+
+.header{
+    width: 100%;
+    padding: 1.2rem 1.5rem;
+}
+.header-main {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    padding-right: 1rem;
+    justify-content:center;
+    align-items: center;
+}
+.logo {
+    font-weight: 800;
+    padding-right: 1rem;
+}
+
+.logo > a{
+    font-size: 2.2rem;
+    color: var(--black);
+    padding-right: 1rem;
+    font-weight: 800;
+}
+.nav-menu {
+    width: 100%;
+}
+.menu{
+    display: flex;
+    width: 100%;
+}
+.menu-item{
+    padding: .8rem 1rem;
+}
+
+#login-button{
+    margin-left: auto;
+}
+
+#register-button{
+    border: 2px solid var(--secondary);
+    border-radius: 15px;
+    padding-left: .5rem;
+}
+
+#register-button:hover > a{
+    color: var(--black);
+}
+
+#register-button:hover {
+    border: 2px solid var(--black);
+}
+
+.menu > .menu-item > a:hover {
+    color: var(--black);
+}
+.sub-menu > .menu-item > a:hover {
+    color: var(--black);
+}
+.sub-menu2 > .menu-item > a:hover {
+    color: var(--black);
+}
+
+.sub-menu > .menu-item > a{
+    display: block;
+    margin: 0 1rem;
+}
+.sub-menu2 > .menu-item > a{
+    display: block;
+    margin: 0 1rem;
+}
+
+.sub-menu-expand{
+    position: absolute;
+    left: 130px;
+    background-color: var(--primary);
+    box-shadow: .1rem .5rem 1rem var(--secondary);
+    border-radius: .5rem;
+    z-index: 15;
+    margin: 1rem 0rem;
+    padding: .5rem 0;
+}
+
+.sub-menu-expand1{
+    position: absolute;
+    top: 10;
+    align-items: center;
+    background-color: var(--primary);
+    box-shadow: .1rem .5rem 1rem var(--secondary);
+    border-radius: .5rem;
+    z-index: 11;
+    margin: 1rem 0rem;
+    padding: 1rem .5rem;
+}
+
+.sub-menu-close{
+    display: none;
+}
+
+.arrow-down{
+    background-image: url(../images/icon-arrow-down.svg);
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: .5rem;
+    height: .3rem;
+    background-size: contain;
+    margin-left: .5rem;
+    margin-bottom: .2rem;
+}
+.arrow-down1{
+    background-image: url(../images/icon-arrow-down.svg);
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: .5rem;
+    height: .3rem;
+    background-size: contain;
+    margin-left: .5rem;
+    margin-bottom: .2rem;
+}
+/* NAVIGATION ENDS */
+
+.home-section{
+    display: flex;
+    position: relative;
+    width: 90%;
+    height: 100%;
+    overflow: hidden;
+    margin: auto;
+}
+
+.content{
+    width: 50%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding: 10rem 5rem;
+}
+.main-img{
+    flex-basis: 50%;
+    max-width: 50%;
+    max-height: 100vh;
+    position: relative;
+    background: url(../images/image-hero-desktop.png);
+    background-size:contain;
+    background-repeat: no-repeat;   
+    background-position: center;
+    order: 1;
+}
+
+.btn-learnMore{
+    padding: 1.2rem 2rem;
+    max-width: 10rem;
+    border-radius: 1rem;
+    font-size: 1em;
+    border: none;
+    background-color: var(--black);
+    color: var(--primary);
+    cursor: pointer;
+    border: 2px solid var(--black);
+}
+
+.btn-learnMore:hover{
+    border: 2px solid var(--secondary);
+    background-color: var(--primary);
+    color: var(--black);
+}
+
+.client-svg{
+    padding-top: 5rem;
+}
+
+.client-svg > img{
+    padding: 0 1rem;
+}
+
+.attribution{
+    padding: 2rem;
+    text-align: center;   
+}
+
+.burger-div{
+    display: none;
+}
+
+@media screen and (max-width: 1080px){
+    .home-section{
+        display: block;
+        overflow: visible;
+        min-width: 100%;
+        position: relative;
+    }
+    .content{
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+        align-items: center;
+    }
+    .main-img{
+        background: url(../images/image-hero-mobile.png);
+        position: relative;
+        order: 0;
+        min-width: 100vw;
+        height: 40vh;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat; 
+    }
+    .menu{
+        display: block;
+        position: absolute;
+        background: var(--primary);
+        height: 110vh;
+        width: 60vw;
+        right: 0;
+        z-index: 9;
+        padding: 5rem 0;
+    }
+    .menu-close{
+        display: none;
+    }
+
+    .nav-menu{
+        position: absolute;
+        top: 0;
+        z-index: 8;
+    }
+    .menu-item{
+        display: block;
+        margin-right: 4rem;
+        text-align: left;
+    }
+
+    .header-main {
+        padding-right: 0rem;
+        justify-content: start;
+        padding: 1rem 0;
+    }
+
+    .header{
+        width: 100%;
+        padding: 0rem 0rem;
+    }
+    #register-button{
+        border: 2px solid var(--secondary);
+        border-radius: 15px;
+        margin: auto;
+        text-align: center;
+        width: 75%;
+    }
+    #login-button{
+        text-align: center;
+        margin-left: 3rem;
+    }
+    .client-svg{
+        display: flex;
+        width: 100%;
+        position: relative;
+        justify-content: center;
+    }
+    .client-svg > img{
+        width: 6.5rem;
+        height: 20px    ;
+        padding: 0 .7rem;
+    }
+    .attribution{
+        padding: 2rem;
+        text-align: center;   
+    }
+    h1{
+        font-size: 2rem;
+        padding-bottom: 1.5rem;
+    }
+    p{
+        font-size: .9em;
+        padding-bottom: 1.5rem;
+        line-height: 1.5;
+    }
+    .btn-learnMore{
+        padding: 1rem 1rem;
+    }
+    .sub-menu-expand{
+        position: static;
+        background-color: var(--primary);
+        width: 50vw;
+        box-shadow: none;
+        border-radius: .5rem;
+        z-index: 8;
+        margin: 0rem;
+        padding: 1rem 0rem;
+    }
+
+    .sub-menu .menu-item > a{
+        margin: 0 0rem;
+        text-align: center;
+    }
+    .menu-item{
+        padding: .7rem;
+        padding-left: .5rem ;
+    }
+
+    .sub-menu-expand1{
+        position: static;
+        background-color: var(--primary);
+        width: 50vw;
+        box-shadow: none;
+        border-radius: .5rem;
+        z-index: 8;
+        margin: 0rem;
+        padding: 1rem 0rem;
+    }
+    .burger-div{
+        display: block;
+        margin-left: auto;
+        margin-right: 1rem;
+        z-index: 11;
+    }
+    .burger{
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+    }
+}
