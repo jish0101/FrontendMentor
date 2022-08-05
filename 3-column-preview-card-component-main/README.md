@@ -23,7 +23,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot](./screenshot.jpg)
+![](./3-column-preview-card-component-main/screenshot.jpg)
 
 ### Links
 

@@ -17,6 +17,6 @@ GitHub landing page: [https://jish0101.github.io/frontendmentor/](https://jish01
 
 4. [intro-section-with-dropdown-navigation-main-master](https://jish0101.github.io/FrontendMentor/intro-section-with-dropdown-navigation-main-master) 
 
-5. [3-column-preview-card-component-main](https://github.com/jish0101/FrontendMentor/tree/main/3-column-preview-card-component-main)
+5. [3-column-preview-card-component-main](https://jish0101.github.io/FrontendMentor/tree/main/3-column-preview-card-component-main)
 
 
