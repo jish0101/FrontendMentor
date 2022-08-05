@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+    --orange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --dark-cyan: hsl(179, 100%, 13%);
+    --white-p: hsla(0, 0%, 100%, 0.75);
+    --light-gray: hsl(0, 0%, 95%);
+}
+
+*{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: .95rem;
+    margin: 0;
+    padding: 0;   
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--light-gray);
+}
+
+h2{
+    color: var(--light-gray);
+    font-size: 2.5rem;
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    padding: 1.5rem 0;
+    text-transform: uppercase;
+}
+
+a{
+    text-decoration: none;
+    color: var(--cyan);
+}
+
+p{
+    line-height: 1.8;
+    padding-bottom: 4rem;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 65%;
+    margin-top: 25vh;
+    margin-bottom: 18vh;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.box{
+    flex: 1 1 33.33%;
+    width: 100%;
+    color: var(--white-p);
+    padding: 3.5rem 3rem;
+    
+}
+
+.box1{
+    background: var(--orange);
+}
+
+.box2{
+    background: var(--cyan);
+}
+
+.box3{
+    background: var(--dark-cyan);
+    
+}
+
+.btn-learn-more{
+    background: var(--light-gray);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    margin-top: 1rem;
+}
+
+.btn1{
+    color: var(--orange);
+}
+.btn1:hover{
+    background: var(--orange);
+    color: var(--white-p);
+    outline: 2px solid var(--white-p);
+    cursor: pointer;
+}
+
+.btn2{
+    color: var(--cyan);
+}
+
+.btn2:hover{
+    background: var(--cyan);
+    color: var(--white-p);
+    outline: 2px solid var(--white-p);
+    cursor: pointer;
+}
+
+.btn3{
+    color: var(--dark-cyan);
+}
+
+.btn3:hover{
+    background: var(--dark-cyan);
+    color: var(--white-p);
+    outline: 2px solid var(--white-p);
+    cursor: pointer;
+}
+
+.attribution{
+    word-spacing: 3px;
+}
+
+@media screen and (max-width: 1151px) {
+    .container{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 815px){
+    .container{
+        width: 100%;
+        flex-direction: column;
+        margin: 3rem 1.5rem;
+        flex-wrap: nowrap;
+    }
+    p{
+        padding-bottom: 1rem;
+    }
+}   
