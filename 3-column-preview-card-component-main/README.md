@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: ()
-- Live Site URL: ()
+- Solution URL: (https://www.frontendmentor.io/solutions/3columnpreviewcardcomponentmain-iGrXktzze5)
+- Live Site URL: (https://jish0101.github.io/FrontendMentor/3-column-preview-card-component-main)
 
 ## My process
 
