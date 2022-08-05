@@ -117,6 +117,8 @@ p{
 
 .attribution{
     word-spacing: 3px;
+    padding: 0 2rem;
+    text-align: center;
 }
 
 @media screen and (max-width: 1151px) {
@@ -127,9 +129,9 @@ p{
 
 @media screen and (max-width: 815px){
     .container{
-        width: 100%;
+        width: 90%;
         flex-direction: column;
-        margin: 3rem 1.5rem;
+        margin: 3rem 0rem;
         flex-wrap: nowrap;
     }
     p{
