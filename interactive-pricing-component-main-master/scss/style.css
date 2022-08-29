@@ -146,7 +146,7 @@ p, span {
   height: 40px;
   width: 40px;
   position: absolute;
-  bottom: -10px;
+  bottom: -12px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
