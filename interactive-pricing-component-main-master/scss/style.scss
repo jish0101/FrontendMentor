@@ -1,0 +1,134 @@
+@use "./resets";
+
+$full-Slider-Bar: hsl(174, 77%, 80%);
+$slider-Backround: hsl(174, 86%, 45%);
+$discount-Background: hsl(14, 92%, 95%);
+$discount-Text: hsl(15, 100%, 70%);
+$cta-Text: hsl(226, 100%, 87%);
+$pricing-Component-Background: hsl(0, 0%, 100%);
+$main-Background: hsl(230, 100%, 99%);
+$empty-Slider-Bar: hsl(224, 65%, 95%);
+$toggle-Background: hsl(223, 50%, 87%);
+$text-blue-color: hsl(225, 20%, 60%);
+$text-CTA-Background: hsl(227, 35%, 25%);
+@mixin font($weight) {
+    font-family: 'Manrope', sans-serif;
+    font-weight: $weight;
+}
+
+body{
+    background: $main-Background;
+    @include font(800);
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    // margin-bottom: 5rem;
+    position: relative;
+}
+
+p,span{
+    @include font(600);
+    font-size: 15px;
+    color: $text-blue-color;
+}
+
+.container{
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    // outline: 2px solid black;
+
+    &-background{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+    }
+
+    &-title{
+        position: relative;
+        margin-top: 7rem;
+        // outline: 2px solid black;
+        text-align: center;
+        h1{
+            padding: .5rem;
+            color: $text-CTA-Background
+        }
+    }
+
+    &-circle{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        z-index: -1;
+    }
+}
+
+.pricing-container{
+    position: absolute;
+    top: 40vh;
+    border-radius: 10px;
+    background: $pricing-Component-Background;
+    width: 35%;
+    height: 50%;
+    box-shadow: -1px 5px 20px $toggle-Background;
+
+    .first-container{
+        padding: 2.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 50%;
+
+        .page-view{
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+        .pricing-per-month{
+            margin-left: auto;
+        }
+        .info{
+            margin-left: auto;
+            font-size: 14px;
+            word-spacing: 1rem;
+            span{
+                word-spacing: 0rem;
+            }
+        }
+    }
+    
+    .last-container{
+        border-top: 1px solid $toggle-Background;
+        width: 100%;
+        height: 50%;
+        display: flex;
+        padding: 0rem 3rem;
+        padding-top: 1.5rem;
+        // outline: 2px solid black;    
+        align-items: center;
+
+        .features span{
+            display: block;
+            font-size: 13px;
+        }
+        .trial-btn{
+            margin-left: auto;
+            padding: .8rem 3rem;
+            border-radius: 50px;
+            border: none;
+            font-family: inherit;
+            color: $cta-Text;
+            background: $text-CTA-Background;
+        }
+
+    }
+}
