@@ -25,7 +25,7 @@ body{
     align-items: center;
     width: 100%;
     height: 100%;
-    // margin-bottom: 5rem;
+    margin-bottom: 5rem;
     position: relative;
 }
 
@@ -78,23 +78,78 @@ p,span{
     border-radius: 10px;
     background: $pricing-Component-Background;
     width: 35%;
-    height: 50%;
+    height: 60%;
     box-shadow: -1px 5px 20px $toggle-Background;
 
     .first-container{
-        padding: 2.5rem;
+        padding: 3rem 2.5rem;
         display: flex;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
+        flex-direction: column;
         width: 100%;
-        height: 50%;
+        height: 55%;
+        // outline: 2px solid black;    
+
 
         .page-view{
             letter-spacing: 2px;
             text-transform: uppercase;
             font-weight: 800;
+            display: inline-block;
         }
+
+        .slider-container {
+            width: 100%;
+            margin: 2.5rem 0;
+            position: relative;
+            #slider{
+                appearance: none;
+                outline: none;
+                border-radius: 3px;
+                width: 100%;
+                height: 7px;
+                background: $empty-Slider-Bar;
+            }
+            #slider::-webkit-slider-thumb{
+                appearance: none;
+                // width: 48px;
+                // height: 48px;
+                cursor: pointer;
+                z-index: 3;
+                position: relative;
+            }
+
+            .selector{
+                // outline: 2px solid black;
+                height: 40px;
+                width: 40px;
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 2;
+                background: $slider-Backround;
+                border-radius: 50%;
+                box-shadow: 0 5px 30px $slider-Backround;
+            }
+            .selectBtn{
+                height: 100%;
+                width: 70%;
+                background: url(../images/icon-slider.svg);
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+        }
+
         .pricing-per-month{
             margin-left: auto;
+            margin-top: -1.5rem;
+            display: inline-block;
         }
         .info{
             margin-left: auto;
@@ -109,7 +164,7 @@ p,span{
     .last-container{
         border-top: 1px solid $toggle-Background;
         width: 100%;
-        height: 50%;
+        height: 45%;
         display: flex;
         padding: 0rem 3rem;
         padding-top: 1.5rem;
@@ -130,6 +185,5 @@ p,span{
             background: $text-CTA-Background;
             cursor: pointer;
         }
-
     }
 }
