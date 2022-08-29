@@ -150,4 +150,5 @@ p, span {
   font-family: inherit;
   color: hsl(226deg, 100%, 87%);
   background: hsl(227deg, 35%, 25%);
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
