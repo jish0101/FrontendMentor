@@ -8,15 +8,14 @@ GitHub landing page: [https://jish0101.github.io/frontendmentor/](https://jish01
 
 ## Projects
 
-1. [ResponsiveWebPage-main](https://jish0101.github.io/FrontendMentor/ResponsiveWebPage-main
-)
+5 -> [3-column-preview-card-component-main](https://jish0101.github.io/FrontendMentor/3-column-preview-card-component-main)
 
-2. [Advice-generator-app-main-master](https://jish0101.github.io/FrontendMentor/advice-generator-app-main-master)
+4 -> [intro-section-with-dropdown-navigation-main-master](https://jish0101.github.io/FrontendMentor/intro-section-with-dropdown-navigation-main-master) 
 
-3. [interactive-pricing-component-main-master](https://jish0101.github.io/FrontendMentor/interactive-pricing-component-main-master)
+3 -> [interactive-pricing-component-main-master](https://jish0101.github.io/FrontendMentor/interactive-pricing-component-main-master)
 
-4. [intro-section-with-dropdown-navigation-main-master](https://jish0101.github.io/FrontendMentor/intro-section-with-dropdown-navigation-main-master) 
+2 -> [Advice-generator-app-main-master](https://jish0101.github.io/FrontendMentor/advice-generator-app-main-master)
 
-5. [3-column-preview-card-component-main](https://jish0101.github.io/FrontendMentor/3-column-preview-card-component-main)
+1 -> [ResponsiveWebPage-main](https://jish0101.github.io/FrontendMentor/ResponsiveWebPage-main)
 
 
