@@ -25,27 +25,32 @@
   <div class="pricing-container">
     <div class="first-container">
       <span class="page-view">
-        100k Pageviews
+        1k Pageviews
       </span>
       <span class="pricing-per-month">
-        $ /month
+        <h1 class="price">$1.00</h1>/month
       </span>
       <div class="slider-container">
-        <input type="range" min="0" max="100" id="slider">
+        <div class="progressBar"></div>
+        <input type="range" min="1" max="100" id="slider">
         <div class="selector">
           <div class="selectBtn"></div>
         </div>
       </div>
-      <p class="info">
-        <span>Monthly Billing</span> <span>Yearly Billing</span> <span>25% discount</span>
-      </p>
+      <div class="info">
+        <span>Monthly Billing</span>
+        <div class="toggle-div"><input type="checkbox" id="toggle">
+          <label for="toggle"></label>
+        </div>
+          <span>Yearly Billing</span> <span id="discount">-25%</span>
+      </div>
     </div>
     <div class="last-container">
-      <p class="features">
-        <span>Unlimited websites</span><br>
-        <span>100% data ownership</span><br>
-        <span>Email reports</span><br>
-      </p>
+      <div class="features">
+        <span>Unlimited websites</span>
+        <span>100% data ownership</span>
+        <span>Email reports</span>
+      </div>
       <button class="trial-btn">Start my trial</button>
     </div>
   </div>
@@ -53,6 +58,8 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
+
+  <script src="./index.js"></script>
 </body>
 
 </html>

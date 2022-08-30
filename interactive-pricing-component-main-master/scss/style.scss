@@ -12,178 +12,363 @@ $toggle-Background: hsl(223, 50%, 87%);
 $text-blue-color: hsl(225, 20%, 60%);
 $text-CTA-Background: hsl(227, 35%, 25%);
 @mixin font($weight) {
-    font-family: 'Manrope', sans-serif;
-    font-weight: $weight;
+  font-family: "Manrope", sans-serif;
+  font-weight: $weight;
 }
 
-body{
-    background: $main-Background;
-    @include font(800);
-    font-size: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+body {
+  background: $main-Background;
+  @include font(800);
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 5rem;
+  position: relative;
+}
+
+p,
+span {
+  @include font(600);
+  font-size: 15px;
+  color: $text-blue-color;
+}
+
+.container {
+  width: 100%;
+  height: 65vh;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+
+  &-background {
     width: 100%;
     height: 100%;
-    margin-bottom: 5rem;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+
+  &-title {
     position: relative;
+    margin-top: 7rem;
+    text-align: center;
+    h1 {
+      padding: 0.5rem;
+      color: $text-CTA-Background;
+    }
+  }
+
+  &-circle {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: -1;
+  }
 }
 
-p,span{
-    @include font(600);
-    font-size: 15px;
-    color: $text-blue-color;
-}
+.pricing-container {
+  position: absolute;
+  top: 40vh;
+  border-radius: 10px;
+  background: $pricing-Component-Background;
+  width: 35%;
+  box-shadow: -1px 5px 20px $toggle-Background;
 
-.container{
-    width: 100%;
-    height: 65vh;
+  .first-container {
+    padding: 3rem 2.5rem;
     display: flex;
-    position: relative;
     flex-direction: column;
-    align-items: center;
-    // outline: 2px solid black;
+    width: 100%;
+    height: 50%;
 
-    &-background{
-        width: 100%;
-        height: 100%;
+    .page-view {
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 800;
+      display: inline-block;
+    }
+    .pricing-per-month {
+      margin-left: auto;
+      position: relative;
+      display: inline-block;
+    }
+    .price{
+      position: absolute;
+      right: 110%;
+      bottom: -50%;
+      color: $text-CTA-Background;
+
+    }
+
+    .slider-container {
+      width: 100%;
+      height: 10px;
+      margin: 2.5rem 0;
+      position: relative;
+      border-radius: 5px;
+      background: $full-Slider-Bar;
+
+      .progressBar{
+        pointer-events: none;
+        width: 0%;
+        height: 10px;
         position: absolute;
         top: 0;
-        z-index: -1;
-    }
-
-    &-title{
-        position: relative;
-        margin-top: 7rem;
-        // outline: 2px solid black;
-        text-align: center;
-        h1{
-            padding: .5rem;
-            color: $text-CTA-Background
-        }
-    }
-
-    &-circle{
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        z-index: 1;
+        border-radius: 20px;
+        left: 0;
+        background: $full-Slider-Bar;
+      }
+      #slider {
+        appearance: none;
         position: absolute;
-        z-index: -1;
+        z-index: 0;
+        outline: none;
+        border-radius: 3px;
+        width: 100%;
+        height: 10px;
+        background: $empty-Slider-Bar;
+      }
+      #slider::-webkit-slider-thumb {
+        visibility: hidden;
+        cursor: pointer;
+        position: relative;
+      }
+      #slider::-moz-range-thumb{
+        visibility: hidden;
+        cursor: pointer;
+      }
+
+      .selector {
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        bottom: -15px;
+        z-index: 1;
+        left: 1%;
+        transform: translateX(-50%);
+        background: $slider-Backround;
+        border-radius: 50%;
+        pointer-events: none;
+        box-shadow: 0 5px 30px $slider-Backround;
+      }
+      .selectBtn {
+        height: 100%;
+        width: 70%;
+        background: url(../images/icon-slider.svg);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 50%;
+        pointer-events: none;
+        transform: translateX(-50%);
+      }
     }
+
+    .info {
+      margin-left: auto;
+      position: relative;
+      word-spacing: 1.25rem;
+      span {
+        word-spacing: 0;
+        font-size: 12px;
+      }
+      #discount{
+        background: $discount-Background;
+        color: $discount-Text;
+        border-radius: 10px;
+      }
+      span:nth-child(1) {
+        margin-right: 3rem;
+      }
+      .toggle-div {
+        width: 48px;
+        height: 20px;
+        position: absolute;
+        top: 0px;
+        left: 34%;
+
+        input[type="checkbox"] {
+          visibility: hidden;
+          &:checked + label {
+            transform: rotate(360deg);
+            background-color: $slider-Backround;
+            &:before {
+              transform: translateX(23px);
+            }
+          }
+        }
+
+        label {
+          position: absolute;
+          width: 48px;
+          height: 23px;
+          border-radius: 20px;
+          top: 0;
+          left: 0;
+          transition: all .75s ease-in-out;
+          transform-origin: 50% 50%;
+          background: $toggle-Background;
+
+          &:before {
+            content: "";
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            background: white;
+            border-radius: 10px;
+            top: 2px;
+            left: 3px;
+            transition: transform .75s ease;
+            transition-delay: .75s;
+          }
+        }
+      }
+    }
+  }
+
+  .last-container {
+    border-top: 1px solid $toggle-Background;
+    width: 100%;
+    height: 45%;
+    display: flex;
+    padding: 1rem 2rem;
+    align-items: center;
+
+    .features span {
+      display: block;
+      font-size: 12px;
+      margin: 1rem;
+      position: relative;
+
+      &:nth-child(1)::before{
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        top: 5px;
+        left: -20px;
+        background: url(../images/icon-check.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      &:nth-child(2)::before{
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        top: 5px;
+        left: -20px;
+        right: 0;
+        background: url(../images/icon-check.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      &:nth-child(3)::before{
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        top: 5px;
+        left: -20px;
+        background: url(../images/icon-check.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+    .trial-btn {
+      margin: auto 1.5rem 1.5rem auto;
+      padding: 0.8rem 3rem;
+      border-radius: 50px;
+      border: none;
+      font-family: inherit;
+      color: $cta-Text;
+      background: $text-CTA-Background;
+      cursor: pointer;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
 }
 
-.pricing-container{
-    position: absolute;
-    top: 40vh;
-    border-radius: 10px;
-    background: $pricing-Component-Background;
-    width: 35%;
-    height: 60%;
-    box-shadow: -1px 5px 20px $toggle-Background;
+@media screen and (max-width: 1111px){
 
-    .first-container{
-        padding: 3rem 2.5rem;
-        display: flex;
-        // flex-wrap: wrap;
-        flex-direction: column;
-        width: 100%;
-        height: 55%;
-        // outline: 2px solid black;    
+  .container .container-title {
 
+    margin: 5rem 0;
+    padding: 0 2rem;
 
-        .page-view{
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            font-weight: 800;
-            display: inline-block;
-        }
-
-        .slider-container {
-            width: 100%;
-            margin: 2.5rem 0;
-            position: relative;
-            #slider{
-                appearance: none;
-                outline: none;
-                border-radius: 3px;
-                width: 100%;
-                height: 7px;
-                background: $empty-Slider-Bar;
-            }
-            #slider::-webkit-slider-thumb{
-                appearance: none;
-                // width: 48px;
-                // height: 48px;
-                cursor: pointer;
-                z-index: 3;
-                position: relative;
-            }
-
-            .selector{
-                // outline: 2px solid black;
-                height: 40px;
-                width: 40px;
-                position: absolute;
-                bottom: -12px;
-                left: 50%;
-                transform: translateX(-50%);
-                z-index: 2;
-                background: $slider-Backround;
-                border-radius: 50%;
-                box-shadow: 0 5px 30px $slider-Backround;
-            }
-            .selectBtn{
-                height: 100%;
-                width: 70%;
-                background: url(../images/icon-slider.svg);
-                background-size: contain;
-                background-position: center;
-                background-repeat: no-repeat;
-                position: absolute;
-                left: 50%;
-                transform: translateX(-50%);
-            }
-
-        }
-
-        .pricing-per-month{
-            margin-left: auto;
-            margin-top: -1.5rem;
-            display: inline-block;
-        }
-        .info{
-            margin-left: auto;
-            font-size: 14px;
-            word-spacing: 1rem;
-            span{
-                word-spacing: 0rem;
-            }
-        }
+    h1{
+      font-size: 1.3rem;
     }
-    
+    p{
+      font-size: 13px;
+      margin: 0 2rem;
+    }
+  }
+
+  .pricing-container{
+    width: 90%;
+    top: 30%;
+
+    .first-container {
+      padding: 2rem .5rem;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 50%;
+    }
+
+    .info{
+      margin: 0;
+      display: flex;
+
+      
+      span{
+        padding: 0 .5rem;
+        font-size: 0px;
+      }
+    }  
+
     .last-container{
-        border-top: 1px solid $toggle-Background;
-        width: 100%;
-        height: 45%;
-        display: flex;
-        padding: 0rem 3rem;
-        padding-top: 1.5rem;
-        // outline: 2px solid black;    
-        align-items: center;
+      flex-direction: column;
+      text-align: center;
 
-        .features span{
-            display: block;
-            font-size: 13px;
-        }
-        .trial-btn{
-            margin-left: auto;
-            padding: .8rem 3rem;
-            border-radius: 50px;
-            border: none;
-            font-family: inherit;
-            color: $cta-Text;
-            background: $text-CTA-Background;
-            cursor: pointer;
-        }
+      .trial-btn{
+        margin: .5rem;
+      }
     }
+    .first-container {
+
+      display: flex;
+      justify-content: center;
+      align-items: center;   
+      
+      .pricing-per-month{
+        margin: 1rem 0rem;
+        margin-left: 3rem;
+      }
+      .slider-container{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .info .toggle-div{
+        left: 35%;
+        top: 15px;
+      }
+      .info span{
+        margin-top: 1rem;
+      }
+    }
+  }
 }

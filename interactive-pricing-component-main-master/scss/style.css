@@ -59,7 +59,8 @@ body {
   position: relative;
 }
 
-p, span {
+p,
+span {
   font-family: "Manrope", sans-serif;
   font-weight: 600;
   font-size: 15px;
@@ -104,7 +105,6 @@ p, span {
   border-radius: 10px;
   background: hsl(0deg, 0%, 100%);
   width: 35%;
-  height: 60%;
   box-shadow: -1px 5px 20px hsl(223deg, 50%, 87%);
 }
 .pricing-container .first-container {
@@ -112,7 +112,7 @@ p, span {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 55%;
+  height: 50%;
 }
 .pricing-container .first-container .page-view {
   letter-spacing: 2px;
@@ -120,38 +120,68 @@ p, span {
   font-weight: 800;
   display: inline-block;
 }
+.pricing-container .first-container .pricing-per-month {
+  margin-left: auto;
+  position: relative;
+  display: inline-block;
+}
+.pricing-container .first-container .price {
+  position: absolute;
+  right: 110%;
+  bottom: -50%;
+  color: hsl(227deg, 35%, 25%);
+}
 .pricing-container .first-container .slider-container {
   width: 100%;
+  height: 10px;
   margin: 2.5rem 0;
   position: relative;
+  border-radius: 5px;
+  background: hsl(174deg, 77%, 80%);
+}
+.pricing-container .first-container .slider-container .progressBar {
+  pointer-events: none;
+  width: 0%;
+  height: 10px;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  border-radius: 20px;
+  left: 0;
+  background: hsl(174deg, 77%, 80%);
 }
 .pricing-container .first-container .slider-container #slider {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  position: absolute;
+  z-index: 0;
   outline: none;
   border-radius: 3px;
   width: 100%;
-  height: 7px;
+  height: 10px;
   background: hsl(224deg, 65%, 95%);
 }
 .pricing-container .first-container .slider-container #slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-          appearance: none;
+  visibility: hidden;
   cursor: pointer;
-  z-index: 3;
   position: relative;
+}
+.pricing-container .first-container .slider-container #slider::-moz-range-thumb {
+  visibility: hidden;
+  cursor: pointer;
 }
 .pricing-container .first-container .slider-container .selector {
   height: 40px;
   width: 40px;
   position: absolute;
-  bottom: -12px;
-  left: 50%;
+  bottom: -15px;
+  z-index: 1;
+  left: 1%;
   transform: translateX(-50%);
-  z-index: 2;
   background: hsl(174deg, 86%, 45%);
   border-radius: 50%;
+  pointer-events: none;
   box-shadow: 0 5px 30px hsl(174deg, 86%, 45%);
 }
 .pricing-container .first-container .slider-container .selectBtn {
@@ -163,36 +193,116 @@ p, span {
   background-repeat: no-repeat;
   position: absolute;
   left: 50%;
+  pointer-events: none;
   transform: translateX(-50%);
-}
-.pricing-container .first-container .pricing-per-month {
-  margin-left: auto;
-  margin-top: -1.5rem;
-  display: inline-block;
 }
 .pricing-container .first-container .info {
   margin-left: auto;
-  font-size: 14px;
-  word-spacing: 1rem;
+  position: relative;
+  word-spacing: 1.25rem;
 }
 .pricing-container .first-container .info span {
-  word-spacing: 0rem;
+  word-spacing: 0;
+  font-size: 12px;
+}
+.pricing-container .first-container .info #discount {
+  background: hsl(14deg, 92%, 95%);
+  color: hsl(15deg, 100%, 70%);
+  border-radius: 10px;
+}
+.pricing-container .first-container .info span:nth-child(1) {
+  margin-right: 3rem;
+}
+.pricing-container .first-container .info .toggle-div {
+  width: 48px;
+  height: 20px;
+  position: absolute;
+  top: 0px;
+  left: 34%;
+}
+.pricing-container .first-container .info .toggle-div input[type=checkbox] {
+  visibility: hidden;
+}
+.pricing-container .first-container .info .toggle-div input[type=checkbox]:checked + label {
+  transform: rotate(360deg);
+  background-color: hsl(174deg, 86%, 45%);
+}
+.pricing-container .first-container .info .toggle-div input[type=checkbox]:checked + label:before {
+  transform: translateX(23px);
+}
+.pricing-container .first-container .info .toggle-div label {
+  position: absolute;
+  width: 48px;
+  height: 23px;
+  border-radius: 20px;
+  top: 0;
+  left: 0;
+  transition: all 0.75s ease-in-out;
+  transform-origin: 50% 50%;
+  background: hsl(223deg, 50%, 87%);
+}
+.pricing-container .first-container .info .toggle-div label:before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 10px;
+  top: 2px;
+  left: 3px;
+  transition: transform 0.75s ease;
+  transition-delay: 0.75s;
 }
 .pricing-container .last-container {
   border-top: 1px solid hsl(223deg, 50%, 87%);
   width: 100%;
   height: 45%;
   display: flex;
-  padding: 0rem 3rem;
-  padding-top: 1.5rem;
+  padding: 1rem 2rem;
   align-items: center;
 }
 .pricing-container .last-container .features span {
   display: block;
-  font-size: 13px;
+  font-size: 12px;
+  margin: 1rem;
+  position: relative;
+}
+.pricing-container .last-container .features span:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 5px;
+  left: -20px;
+  background: url(../images/icon-check.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.pricing-container .last-container .features span:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 5px;
+  left: -20px;
+  right: 0;
+  background: url(../images/icon-check.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.pricing-container .last-container .features span:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 5px;
+  left: -20px;
+  background: url(../images/icon-check.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .pricing-container .last-container .trial-btn {
-  margin-left: auto;
+  margin: auto 1.5rem 1.5rem auto;
   padding: 0.8rem 3rem;
   border-radius: 50px;
   border: none;
@@ -200,4 +310,68 @@ p, span {
   color: hsl(226deg, 100%, 87%);
   background: hsl(227deg, 35%, 25%);
   cursor: pointer;
+}
+.pricing-container .last-container .trial-btn:hover {
+  color: white;
+}
+
+@media screen and (max-width: 1111px) {
+  .container .container-title {
+    margin: 5rem 0;
+    padding: 0 2rem;
+  }
+  .container .container-title h1 {
+    font-size: 1.3rem;
+  }
+  .container .container-title p {
+    font-size: 13px;
+    margin: 0 2rem;
+  }
+  .pricing-container {
+    width: 90%;
+    top: 30%;
+  }
+  .pricing-container .first-container {
+    padding: 2rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+  }
+  .pricing-container .info {
+    margin: 0;
+    display: flex;
+  }
+  .pricing-container .info span {
+    padding: 0 0.5rem;
+    font-size: 0px;
+  }
+  .pricing-container .last-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .pricing-container .last-container .trial-btn {
+    margin: 0.5rem;
+  }
+  .pricing-container .first-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pricing-container .first-container .pricing-per-month {
+    margin: 1rem 0rem;
+    margin-left: 3rem;
+  }
+  .pricing-container .first-container .slider-container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .pricing-container .first-container .info .toggle-div {
+    left: 35%;
+    top: 15px;
+  }
+  .pricing-container .first-container .info span {
+    margin-top: 1rem;
+  }
 }/*# sourceMappingURL=style.css.map */
