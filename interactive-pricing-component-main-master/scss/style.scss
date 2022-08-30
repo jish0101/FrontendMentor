@@ -25,7 +25,6 @@ body {
   align-items: center;
   width: 100%;
   height: 100%;
-  margin-bottom: 5rem;
   position: relative;
 }
 
@@ -38,7 +37,7 @@ span {
 
 .container {
   width: 100%;
-  height: 65vh;
+  height: 55vh;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -54,7 +53,7 @@ span {
 
   &-title {
     position: relative;
-    margin-top: 7rem;
+    margin-top: 5rem;
     text-align: center;
     h1 {
       padding: 0.5rem;
@@ -73,7 +72,7 @@ span {
 
 .pricing-container {
   position: absolute;
-  top: 40vh;
+  top: 33vh;
   border-radius: 10px;
   background: $pricing-Component-Background;
   width: 35%;
