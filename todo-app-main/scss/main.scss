@@ -1,0 +1,19 @@
+@use "./darkmode";
+@use "./lightmode";
+@use "./resets";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+:root{
+    --primary-clr-bright-blue : hsl(220, 98%, 61%);
+    --check-background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+@mixin font($weight) {
+    font-family: inherit;
+    font-weight: $weight;
+    //400,700
+}
