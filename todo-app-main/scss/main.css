@@ -1,22 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
-:root {
-  --very-dark-blue: hsl(235, 21%, 11%);
-  --very-dark-desaturated-blue: hsl(235, 24%, 19%);
-  --light-grayish-blue: hsl(234, 39%, 85%);
-  --light-grayish-blue-hover: hsl(236, 33%, 92%);
-  --dark-grayish-blue: hsl(234, 11%, 52%);
-  --very-dark-grayish-blue: hsl(233, 14%, 35%);
-  --very-dark-grayish-blue2: hsl(237, 14%, 26%);
-}
-
-:root {
-  --clr-light-gray: hsl(0, 0%, 98%);
-  --very-Light-grayish-blue: hsl(236, 33%, 92%);
-  --Light-grayish-blue: hsl(233, 11%, 84%);
-  --dark-grayish-blue: hsl(236, 9%, 61%);
-  --very-dark-grayish-blue: hsl(235, 19%, 35%);
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -82,8 +64,194 @@ h6 {
 :root {
   --primary-clr-bright-blue: hsl(220, 98%, 61%);
   --check-background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  --clr-light-gray: hsl(0, 0%, 98%);
+  --very-Light-grayish-blue: hsl(236, 33%, 92%);
+  --light-grayish-blue: hsl(233, 11%, 84%);
+  --dark-grayish-blue: hsl(236, 9%, 61%);
+  --very-dark-grayish-blue: hsl(235, 19%, 35%);
+  --very-dark-blue: hsl(235, 21%, 11%);
+  --very-dark-desaturated-blue: hsl(235, 24%, 19%);
+  --light-grayish-blue: hsl(234, 39%, 85%);
+  --light-grayish-blue-hover: hsl(236, 33%, 92%);
+  --dark-grayish-blue: hsl(234, 11%, 52%);
+  --very-dark-grayish-blue: hsl(233, 14%, 35%);
+  --very-dark-grayish-blue2: hsl(237, 14%, 26%);
 }
 
 body {
   font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todo-head {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  background: url(../images/bg-desktop-light.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: start;
+}
+.todo-head-items {
+  width: 33.3%;
+  position: relative;
+}
+.todo-head-items .todo-title {
+  color: var(--clr-light-gray);
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  margin: 4.5rem 0 2.5rem 0;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+.todo-head-items .todo-toggle-mode {
+  position: absolute;
+  top: 35%;
+  right: 0;
+  width: 1.5rem;
+  height: 2.5rem;
+  background-size: cover;
+  background: url(../images/icon-moon.svg);
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.todo-head .todo-list-creater {
+  width: 100%;
+  position: relative;
+}
+.todo-head .todo-list-creater .todo-new-list {
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 1rem 3rem;
+  border-radius: 0.5rem;
+  color: var(--very-dark-grayish-blue);
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.todo-head .todo-list-creater .btn-task {
+  position: absolute;
+  top: -3px;
+  right: 0;
+  background-color: inherit;
+  cursor: pointer;
+  border: none;
+  color: var(--primary-clr-bright-blue);
+  width: 10%;
+  height: 100%;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 3.5rem;
+}
+
+.todo-list {
+  width: 33.3%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: var(--clr-light-gray);
+  transform: translate(-50%, -50%);
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 50px var(--light-grayish-blue);
+}
+.todo-list .task {
+  width: 100%;
+  border-bottom: 1px solid var(--light-grayish-blue);
+  padding: 1.2rem 2rem;
+  position: relative;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.todo-list .task input {
+  visibility: hidden;
+}
+.todo-list .task label {
+  cursor: pointer;
+  color: var(--very-dark-grayish-blue);
+  font-size: 1.1rem;
+  padding: 1.2rem 1rem;
+}
+.todo-list .task label .custom-checkbox {
+  position: absolute;
+  top: 30%;
+  left: 3%;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid var(--light-grayish-blue);
+  border-radius: 50%;
+}
+.todo-list .task label .custom-checkbox .tick {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.todo-list .task input:checked + label {
+  color: var(--dark-grayish-blue);
+  -webkit-text-decoration: line-through 2px currentColor;
+          text-decoration: line-through 2px currentColor;
+}
+.todo-list .task input:checked + label .custom-checkbox {
+  background: var(--check-background);
+}
+.todo-list .filter-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+.todo-list .filter-list .list-item-count {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--dark-grayish-blue);
+}
+.todo-list .filter-list .filter-list-item {
+  padding: 0 0.3rem;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--dark-grayish-blue);
+  cursor: pointer;
+}
+.todo-list .filter-list .active-filter {
+  color: var(--primary-clr-bright-blue);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.todo-list .filter-list .clear-list {
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: var(--dark-grayish-blue);
+}
+
+@media screen and (max-width: 930px) {
+  .todo-head {
+    background-position-x: center;
+    height: 30vh;
+  }
+  .todo-head .todo-head-items {
+    width: 90%;
+  }
+  .todo-list {
+    width: 90%;
+    top: 41%;
+    box-shadow: 0 20px 200px var(--light-grayish-blue);
+  }
+  .todo-list .filter-list {
+    padding: 1rem 0.5rem;
+  }
+  .todo-list .filter {
+    position: absolute;
+    bottom: -30%;
+    padding: 1rem;
+    left: 20%;
+    background: var(--clr-light-gray);
+  }
 }/*# sourceMappingURL=main.css.map */
