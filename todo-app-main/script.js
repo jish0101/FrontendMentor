@@ -63,12 +63,12 @@ function clearTodo(todo) {
 }
 
 function renderTodo(taskElement) {
-  const check = taskElement.querySelector("[data-checkbox]");
-  if (check.checked) {
-    check.classList.add("checked");
+  const Prevcheck = taskElement.querySelector("[data-checkbox]");
+  if (Prevcheck.checked) {
+    Prevcheck.classList.add("checked");
   }
-  const div = taskElement.querySelector("[data-checkbox]");
-  func(div);
+  const check = taskElement.querySelector("[data-checkbox]");
+  func(check);
   todoList.appendChild(taskElement);
   updateLS();
   newTaskInput.value = "";

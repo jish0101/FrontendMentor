@@ -122,22 +122,23 @@ body {
 .todo-head .todo-list-creater {
   width: 100%;
   position: relative;
+  z-index: 2;
 }
 .todo-head .todo-list-creater .todo-new-list {
   width: 100%;
   outline: none;
-  border: none;
   z-index: 2;
+  border: none;
   padding: 1rem 3rem;
   border-radius: 0.5rem;
   color: var(--very-dark-grayish-blue);
   font-family: inherit;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 .todo-head .todo-list-creater .btn-task {
   position: absolute;
-  top: -3px;
+  top: 0;
   right: 0;
   background-color: inherit;
   color: var(--primary-clr-bright-blue);
@@ -151,10 +152,9 @@ body {
 }
 
 .todo-list {
-  width: 33.3%;
+  min-width: 33.3%;
   height: auto;
-  position: absolute;
-  top: 33%;
+  margin-top: -3rem;
   background: var(--clr-light-gray);
   border-radius: 0.5rem;
   box-shadow: 0 10px 50px var(--light-grayish-blue);
@@ -169,13 +169,13 @@ body {
   font-size: 1rem;
 }
 .todo-list .task input {
-  visibility: hidden;
+  display: none;
 }
 .todo-list .task label {
   cursor: pointer;
   color: var(--very-dark-grayish-blue);
   font-size: 1.1rem;
-  padding: 1.2rem 1rem;
+  padding: 1.2rem 1.5rem;
 }
 .todo-list .task label .custom-checkbox {
   position: absolute;
@@ -266,8 +266,11 @@ body {
   }
   .todo-list {
     width: 90%;
-    top: 28%;
+    position: relative;
     box-shadow: 0 20px 200px var(--light-grayish-blue);
+  }
+  .todo-list .task {
+    z-index: 0;
   }
   .todo-list .filter-list {
     padding: 1rem 0.5rem;
@@ -276,7 +279,7 @@ body {
     position: absolute;
     width: 100%;
     left: 0;
-    top: 100%;
+    bottom: -22%;
     padding: 0.5rem;
     text-align: center;
     background: var(--clr-light-gray);
