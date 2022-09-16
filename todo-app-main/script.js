@@ -67,16 +67,18 @@ function renderTodo(taskElement) {
   if (check.checked) {
     check.classList.add("checked");
   }
+  const div = taskElement.querySelector("[data-checkbox]");
+  func(div);
   todoList.appendChild(taskElement);
   updateLS();
-  const checks = document.querySelectorAll('[data-checkbox]');
-  checks.forEach((check) => {
+  newTaskInput.value = "";
+}
+
+function func(check) {
     check.addEventListener("click", () => {
       check.classList.toggle("checked");
       updateLS();
     });
-  });
-  newTaskInput.value = "";
 }
 
 function updateLS() {
