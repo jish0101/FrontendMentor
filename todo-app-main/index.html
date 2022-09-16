@@ -14,15 +14,42 @@
       <h1 class="todo-title">todo</h1>
       <span class="todo-toggle-mode"></span>
       <div class="todo-list-creater">
-        <form action="">
-          <input type="text" name="" id="" class="todo-new-list" placeholder="Create new todo" aria-label="new task">
+        <form action="" data-new-task-form>
+          <input type="text" name="" id="" class="todo-new-list" placeholder="Create new todo" aria-label="new task" data-new-task-input>
           <button class="btn-task">+</button>
         </form>
       </div>
     </div>
   </div>
-  <div class="todo-list">
+  <div class="todo-list" data-todo-list>
+    <div class="filter-list">
+      <span class="list-item-count" data-item-count>0 item left</span>
+      <div class="filter">
+        <span class="filter-list-item active-filter">All</span>
+        <span class="filter-list-item">Active</span>
+        <span class="filter-list-item">Completed</span>
+      </div>
+      <span class="clear-list">Clear Completed</span>
+    </div>
+  </div>
+  <template id="task-template">
     <div class="task">
+      <input type="checkbox" data-checkbox class="check" name="" id="">
+      <label>
+        <span class="custom-checkbox">
+          <img src="./images/icon-check.svg" alt="" class="tick">
+        </span>
+      </label>
+    </div>
+  </template>
+</body> 
+</html>
+<!-- <div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  Coded by <a href="#">Your Name Here</a>.
+</div> -->
+
+    <!-- <div class="task">
       <input type="checkbox" name="" id="task1">
       <label for="task1">
         <span class="custom-checkbox">
@@ -48,20 +75,4 @@
         </span>
         Third
       </label>
-    </div>
-    <div class="filter-list">
-      <span class="list-item-count">0 items left</span>
-      <div class="filter">
-      <span class="filter-list-item active-filter">All</span>
-      <span class="filter-list-item">Active</span>
-      <span class="filter-list-item">Completed</span>
-      </div>
-      <span class="clear-list">Clear Completed</span>
-    </div>
-  </div>
-</body> 
-</html>
-<!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+    </div> -->
