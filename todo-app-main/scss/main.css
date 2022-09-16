@@ -266,8 +266,9 @@ body {
   }
   .todo-list {
     width: 90%;
-    position: relative;
+    margin-top: -1rem;
     box-shadow: 0 20px 200px var(--light-grayish-blue);
+    position: relative;
   }
   .todo-list .task {
     z-index: 0;
@@ -278,8 +279,9 @@ body {
   .todo-list .filter {
     position: absolute;
     width: 100%;
+    order: 3;
     left: 0;
-    bottom: -22%;
+    top: 100%;
     padding: 0.5rem;
     text-align: center;
     background: var(--clr-light-gray);
