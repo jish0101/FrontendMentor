@@ -10,6 +10,8 @@ const addTaskBtn = document.querySelector(".btn-task");
 
 // features items starts from here.
 
+const darkModeToggle = document.querySelector("[data-dark-mode]");
+
 const clearCompleted = document.querySelector(".clear-list");
 
 const filter = document.querySelector(".filter");
@@ -72,13 +74,26 @@ function renderTodo(taskElement) {
   todoList.appendChild(taskElement);
   updateLS();
   newTaskInput.value = "";
+
+  const labels = document.querySelectorAll("[data-label]");
+  if (document.body.classList.contains("body-dark")) {
+    if (labels) {
+      labels.forEach((label) => {
+        label.classList.add("dark-label-font");
+      });
+    }
+  } else {
+    labels.forEach((label) => {
+      label.classList.remove("dark-label-font");
+    });
+  }
 }
 
 function func(check) {
-    check.addEventListener("click", () => {
-      check.classList.toggle("checked");
-      updateLS();
-    });
+  check.addEventListener("click", () => {
+    check.classList.toggle("checked");
+    updateLS();
+  });
 }
 
 function updateLS() {
@@ -107,5 +122,34 @@ function itemRemainingCount() {
   let totalTask = todosEl.length;
   let completedTask = checked.length;
   let itemRemainingc = totalTask - completedTask;
-  itemRemaining.innerText = `${itemRemainingc} ${itemRemainingc < 2 ? "item":"items"} left`
+  itemRemaining.innerText = `${itemRemainingc} ${
+    itemRemainingc < 2 ? "item" : "items"
+  } left`;
+}
+
+darkModeToggle.addEventListener("click", () => {
+  enableDarkMode();
+  const labels = document.querySelectorAll("[data-label]");
+  if (document.body.classList.contains("body-dark")) {
+    if (labels) {
+      labels.forEach((label) => {
+        label.classList.add("dark-label-font");
+      });
+    }
+  } else {
+    labels.forEach((label) => {
+      label.classList.remove("dark-label-font");
+    });
+  }
+});
+
+function enableDarkMode() {
+  document.body.classList.toggle("body-dark");
+  const todoHead = document.querySelector("[data-todo-head]");
+  todoHead.classList.toggle("todo-head-dark");
+  todoList.classList.toggle("todo-new-list-dark");
+  newTaskInput.classList.toggle("todo-new-list-dark");
+  const btn = document.querySelector('.btn-task');
+  btn.classList.toggle("btn-task-dark");
+  darkModeToggle.classList.toggle("todo-dark-mode-dark");
 }

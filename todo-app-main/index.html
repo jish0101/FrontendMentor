@@ -9,10 +9,10 @@
   <script defer src="./script.js"></script>
 </head>
 <body>
-  <div class="todo-head">
+  <div class="todo-head" data-todo-head>
     <div class="todo-head-items">
       <h1 class="todo-title">todo</h1>
-      <span class="todo-toggle-mode"></span>
+      <span data-dark-mode class="todo-toggle-mode"></span>
       <div class="todo-list-creater">
         <form action="" data-new-task-form>
           <input type="text" name="" id="" class="todo-new-list" placeholder="Create new todo" aria-label="new task" data-new-task-input>
@@ -35,7 +35,7 @@
   <template id="task-template">
     <div class="task">
       <input type="checkbox" data-checkbox class="check" name="" id="">
-      <label>
+      <label class="light-label" data-label>
         <span class="custom-checkbox">
           <img src="./images/icon-check.svg" alt="" class="tick">
         </span>
