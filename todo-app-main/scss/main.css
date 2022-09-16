@@ -181,7 +181,8 @@ body {
 }
 .todo-list .task .light-label .custom-checkbox {
   position: absolute;
-  top: 30%;
+  top: 25%;
+  z-index: 1;
   left: 3%;
   width: 1.5rem;
   height: 1.5rem;
@@ -190,19 +191,23 @@ body {
 }
 .todo-list .task .light-label .custom-checkbox .tick {
   width: 50%;
+  visibility: hidden;
   height: 50%;
   position: absolute;
+  fill: none;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 .todo-list .task input:checked + label {
-  color: var(--dark-grayish-blue);
   -webkit-text-decoration: line-through 2px currentColor;
           text-decoration: line-through 2px currentColor;
 }
 .todo-list .task input:checked + label .custom-checkbox {
   background: var(--check-background);
+}
+.todo-list .task input:checked + label .custom-checkbox .tick {
+  visibility: visible;
 }
 .todo-list .filter-list {
   display: flex;

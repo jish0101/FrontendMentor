@@ -20,6 +20,25 @@ const itemRemaining = document.querySelector("[data-item-count]");
 
 const prevTodos = JSON.parse(localStorage.getItem("todos"));
 
+const isDarkMode = JSON.parse(localStorage.getItem("darkMode"));
+
+if (isDarkMode) {
+  enableDarkMode();
+  const labels = document.querySelectorAll("[data-label]");
+  if (document.body.classList.contains("body-dark")) {
+    if (labels) {
+      labels.forEach((label) => {
+        label.classList.add("dark-label-font");
+      });
+    }
+  } else {
+    labels.forEach((label) => {
+      label.classList.remove("dark-label-font");
+    });
+  }
+  updateLS();
+}
+
 if (prevTodos) {
   prevTodos.forEach((prevTodo) => {
     const createdTodo = createTodo(prevTodo.text, prevTodo.completed);
@@ -111,6 +130,11 @@ function updateLS() {
       completed: checked.classList.contains("checked"),
     });
   });
+  if (document.body.classList.contains("body-dark")){
+    localStorage.setItem("darkMode", "true");
+  } else {
+    localStorage.setItem("darkMode", "false");
+  }
   localStorage.setItem("todos", JSON.stringify(todos));
   itemRemainingCount();
 }
@@ -124,7 +148,7 @@ function itemRemainingCount() {
   let itemRemainingc = totalTask - completedTask;
   itemRemaining.innerText = `${itemRemainingc} ${
     itemRemainingc < 2 ? "item" : "items"
-  } left`;
+    } left`;
 }
 
 darkModeToggle.addEventListener("click", () => {
@@ -141,6 +165,7 @@ darkModeToggle.addEventListener("click", () => {
       label.classList.remove("dark-label-font");
     });
   }
+  updateLS();
 });
 
 function enableDarkMode() {

@@ -122,7 +122,8 @@ body {
 
       .custom-checkbox {
         position: absolute;
-        top: 30%;
+        top: 25%;
+        z-index: 1;
         left: 3%;
         width: 1.5rem;
         height: 1.5rem;
@@ -131,21 +132,28 @@ body {
 
         .tick {
           width: 50%;
+          visibility: hidden;
           height: 50%;
           position: absolute;
+          fill: none;
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
         }
       }
     }
+
     input:checked + label {
-      color: var(--dark-grayish-blue);
+      // color: var(--dark-grayish-blue);
       text-decoration: line-through 2px currentColor;
     }
 
     input:checked + label .custom-checkbox {
       background: var(--check-background);
+    }
+
+    input:checked + label .custom-checkbox .tick{
+      visibility: visible;
     }
   }
   .filter-list {
