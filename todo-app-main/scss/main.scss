@@ -190,10 +190,11 @@ body {
 .todo-dark-mode-dark {
   background: url(../images/icon-sun.svg) !important;
   background-repeat: no-repeat !important;
+  background-size: contain !important;
 }
 .todo-new-list-dark {
   background: var(--very-dark-desaturated-blue);
-  box-shadow: 0 0 20px black;
+  box-shadow: none;
   color: aqua!important;
 }
 
@@ -219,7 +220,7 @@ body {
   }
   .todo-list {
     width: 90%;
-    margin: 0;  
+    margin: -1rem;  
     position: relative;
     
     .task{
