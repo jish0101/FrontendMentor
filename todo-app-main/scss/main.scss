@@ -245,6 +245,9 @@ body {
     }
     .filter-list {
       padding: 1rem 0.5rem; 
+      &-item{
+        padding: .7rem !important;
+      }
     }
     .filter {
       position: absolute;
@@ -255,6 +258,7 @@ body {
       padding: 1.5rem;
       text-align: center;
       background: inherit;
+
     }
   }
 }

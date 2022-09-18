@@ -301,6 +301,9 @@ body {
   .todo-list .filter-list {
     padding: 1rem 0.5rem;
   }
+  .todo-list .filter-list-item {
+    padding: 0.7rem !important;
+  }
   .todo-list .filter {
     position: absolute;
     width: 100%;
