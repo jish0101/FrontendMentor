@@ -1,12 +1,15 @@
 # Frontend Mentor Challenges
 
 This repository contains [Frontend Mentor](https://www.frontendmentor.io/challenges) challenge projects that I completed.
+Recent porjects will have better code and different tech.
 
 Comments and suggestions can be sent via [@herojish](https://twitter.com/herojish)
 
 GitHub landing page: [https://jish0101.github.io/frontendmentor/](https://jish0101.github.io/frontendmentor/)
 
 ## Projects
+
+6 -> [todo-app-main](https://jish0101.github.io/FrontendMentor/todo-app-main/)
 
 5 -> [3-column-preview-card-component-main](https://jish0101.github.io/FrontendMentor/3-column-preview-card-component-main)
 
