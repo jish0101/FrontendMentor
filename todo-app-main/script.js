@@ -14,8 +14,6 @@ const darkModeToggle = document.querySelector("[data-dark-mode]");
 
 const clearAll = document.querySelector(".clear-list");
 
-// const deleteTodo = document.querySelectorAll('.deleteTodo');
-
 const filter = document.querySelector(".filter");
 
 const itemRemaining = document.querySelector("[data-item-count]");
