@@ -144,7 +144,6 @@ body {
     }
 
     input:checked + label {
-      // color: var(--dark-grayish-blue);
       text-decoration: line-through 2px currentColor;
     }
 
@@ -162,12 +161,12 @@ body {
     align-items: center;
     padding: 1rem 1.5rem;
     .list-item-count {
-      font-size: 0.8rem;
+      font-size: .9rem;
       font-weight: 700;
       color: var(--dark-grayish-blue);
     }
     .filter-list-item {
-      padding: 0 0.3rem;
+      padding: 0 .5rem;
       font-weight: 700;
       font-size: 0.8rem;
       color: var(--dark-grayish-blue);
@@ -180,10 +179,19 @@ body {
     }
     .clear-list {
       cursor: pointer;
-      font-size: 0.8rem;
+      font-size: .9 rem;
       color: var(--dark-grayish-blue);
     }
   }
+}
+.hide{
+  display: none !important;
+}
+
+.deleteTodo{
+  position: absolute;
+  right: 6%;
+  cursor: pointer;
 }
 
 // Dark-mode classes
@@ -210,8 +218,8 @@ body {
   color: var(--light-grayish-blue)!important;
 }
 
-.task {
-  border-bottom: var(--dark-grayish-blue);
+.task-dark{
+  border-bottom: 2px solid var(--very-dark-grayish-blue)!important;
 }
 
 .btn-task-dark{

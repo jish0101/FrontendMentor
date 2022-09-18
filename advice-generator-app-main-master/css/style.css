@@ -33,7 +33,7 @@ p{
     padding: 1rem 1rem;
     margin: 20vh auto;
     max-height: 20rem;
-    background-color: #313a49 ;
+    background-color: #313a49;
 }
 @media screen and (min-width: 820px) {
     .container{

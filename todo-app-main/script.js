@@ -12,7 +12,9 @@ const addTaskBtn = document.querySelector(".btn-task");
 
 const darkModeToggle = document.querySelector("[data-dark-mode]");
 
-const clearCompleted = document.querySelector(".clear-list");
+const clearAll = document.querySelector(".clear-list");
+
+// const deleteTodo = document.querySelectorAll('.deleteTodo');
 
 const filter = document.querySelector(".filter");
 
@@ -21,6 +23,13 @@ const itemRemaining = document.querySelector("[data-item-count]");
 const prevTodos = JSON.parse(localStorage.getItem("todos"));
 
 const isDarkMode = JSON.parse(localStorage.getItem("darkMode"));
+
+if (prevTodos) {
+  prevTodos.forEach((prevTodo) => {
+    const createdTodo = createTodo(prevTodo.text, prevTodo.completed);
+    renderTodo(createdTodo);
+  });
+}
 
 if (isDarkMode) {
   enableDarkMode();
@@ -31,19 +40,8 @@ if (isDarkMode) {
         label.classList.add("dark-label-font");
       });
     }
-  } else {
-    labels.forEach((label) => {
-      label.classList.remove("dark-label-font");
-    });
   }
   updateLS();
-}
-
-if (prevTodos) {
-  prevTodos.forEach((prevTodo) => {
-    const createdTodo = createTodo(prevTodo.text, prevTodo.completed);
-    renderTodo(createdTodo);
-  });
 }
 
 newTaskForm.addEventListener("submit", (e) => {
@@ -55,7 +53,7 @@ newTaskForm.addEventListener("submit", (e) => {
   }
 });
 
-clearCompleted.addEventListener("click", () => {
+clearAll.addEventListener("click", () => {
   clearTodo();
 });
 
@@ -70,9 +68,10 @@ function createTodo(text, completed) {
   return taskElement;
 }
 
-function clearTodo(todo) {
-  if (todo) {
-    todo.remove();
+function clearTodo(cross) {
+  console.log(cross);
+  if (cross) {
+    cross.parentNode.remove();
     updateLS();
     return;
   }
@@ -94,6 +93,15 @@ function renderTodo(taskElement) {
   updateLS();
   newTaskInput.value = "";
 
+  const deleteTodo = document.querySelectorAll('.deleteTodo');
+  console.log(deleteTodo);
+  
+deleteTodo.forEach(cross => {
+  cross.addEventListener("click", () => {
+    clearTodo(cross);
+  });
+});
+
   const labels = document.querySelectorAll("[data-label]");
   if (document.body.classList.contains("body-dark")) {
     if (labels) {
@@ -101,6 +109,10 @@ function renderTodo(taskElement) {
         label.classList.add("dark-label-font");
       });
     }
+    const task = document.querySelectorAll('.task');
+    task.forEach(task => {
+      task.classList.add("task-dark");
+    });
   } else {
     labels.forEach((label) => {
       label.classList.remove("dark-label-font");
@@ -177,4 +189,55 @@ function enableDarkMode() {
   const btn = document.querySelector('.btn-task');
   btn.classList.toggle("btn-task-dark");
   darkModeToggle.classList.toggle("todo-dark-mode-dark");
+  const task = document.querySelectorAll('.task');
+  task.forEach(task => {
+    task.classList.toggle("task-dark");
+  });
+}
+
+function filters(e) {
+  const allfilter = document.querySelectorAll('.filter-list-item');
+  if (e.target.classList.contains("filter-list-item")) {
+    allfilter.forEach(filter => {
+      filter.classList.remove("active-filter")
+      filterLogic(e.target);
+    });
+    e.target.classList.add("active-filter");
+    filterLogic(e.target);
+  }
+}
+
+filter.addEventListener("click", (e) => {
+  filters(e);
+});
+
+function filterLogic(object) {
+  const task = document.querySelectorAll('.task');
+  if (task) {
+    if (object.innerText === "All") {
+      task.forEach(task => {
+        task.classList.remove("hide")
+      });
+    } else if (object.innerText === "Active") {
+      const unactive = document.querySelectorAll('.checked');
+      task.forEach(object => {
+        object.classList.remove("hide");
+      })
+      if (unactive) {
+        unactive.forEach(object => {
+          object.parentNode.classList.add("hide");
+        })
+      }
+    } else if (object.innerText === "Completed") {
+      const unactive = document.querySelectorAll('.checked')
+      task.forEach(object => {
+        object.classList.add("hide");
+      })
+      if (unactive) {
+        unactive.forEach(object => {
+          object.parentNode.classList.remove("hide");
+        })
+      }
+    }
+  }
 }
