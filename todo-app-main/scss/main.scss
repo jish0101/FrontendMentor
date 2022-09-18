@@ -39,7 +39,7 @@ body {
 
 .todo-head {
   width: 100%;
-  height: 40vh;
+  height: 35vh;
   display: flex;
   background: url(../images/bg-desktop-light.jpg);
   background-size: cover;
@@ -47,7 +47,7 @@ body {
   justify-content: center;
   align-items: start;
   &-items {
-    width: 33.3%;
+    width: 36.6%;
     position: relative;
 
     .todo-title {
@@ -98,10 +98,10 @@ body {
   }
 }
 .todo-list {
-  min-width: 33.3%;
+  min-width: 36.6%;
   min-height: max-content;
   z-index: 2;
-  margin-top: -3rem;
+  margin-top: -1rem;
   background: var(--clr-light-gray);
   border-radius: 0.5rem;
   box-shadow: 0 10px 50px var(--light-grayish-blue);
