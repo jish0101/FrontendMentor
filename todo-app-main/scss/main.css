@@ -296,7 +296,7 @@ body {
   }
   .todo-list {
     width: 90%;
-    margin: 0rem;
+    margin: -1.5rem 0;
     position: relative;
   }
   .todo-list .task {
