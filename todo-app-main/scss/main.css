@@ -155,7 +155,7 @@ body {
   min-height: -moz-max-content;
   min-height: max-content;
   z-index: 2;
-  margin-top: -2.5rem;
+  margin-top: -3.4rem;
   background: var(--clr-light-gray);
   border-radius: 0.5rem;
   box-shadow: 0 10px 50px var(--light-grayish-blue);
