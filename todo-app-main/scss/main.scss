@@ -39,13 +39,12 @@ body {
 
 .todo-head {
   width: 100%;
-  height: 35vh;
+  height: 250px; //35vh
   display: flex;
   background: url(../images/bg-desktop-light.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   justify-content: center;
-  align-items: start;
   &-items {
     width: 36.6%;
     position: relative;
@@ -59,7 +58,7 @@ body {
     }
     .todo-toggle-mode {
       position: absolute;
-      top: 35%;
+      top: 4.5rem; //35%
       right: 0;
       width: 1.5rem;
       height: 2.5rem;
@@ -229,16 +228,22 @@ body {
 @media screen and (max-width: 930px) {
   .todo-head {
     background-position-x: center;
-    height: 30vh;
+    height: 210px;
     .todo-head-items {
       width: 90%;
+      .todo-title{
+        margin: 2.5rem 0;
+      }
+      .todo-toggle-mode{
+        top: 2.5rem;
+      }
     }
   }
   .todo-list {
     width: 90%;
-    margin: -1rem;  
+    margin: 0rem;  
     position: relative;
-    
+
     .task{
       z-index: 0;
       padding: 1rem 2rem;
