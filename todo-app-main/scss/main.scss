@@ -39,7 +39,7 @@ body {
 
 .todo-head {
   width: 100%;
-  height: 250px; //35vh
+  height: 275px; //35vh
   display: flex;
   background: url(../images/bg-desktop-light.jpg);
   background-size: cover;
@@ -100,7 +100,7 @@ body {
   min-width: 36.6%;
   min-height: max-content;
   z-index: 2;
-  margin-top: -1rem;
+  margin-top: -2.5rem;
   background: var(--clr-light-gray);
   border-radius: 0.5rem;
   box-shadow: 0 10px 50px var(--light-grayish-blue);
