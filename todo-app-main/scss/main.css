@@ -87,7 +87,7 @@ body {
 
 .todo-head {
   width: 100%;
-  height: 285px;
+  height: 300px;
   display: flex;
   background: url(../images/bg-desktop-light.jpg);
   background-size: cover;
