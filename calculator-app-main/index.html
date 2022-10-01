@@ -1,26 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./scss/main.css">
+  <script src="./scripts/theme-toggle.js" defer></script>
   <title>Frontend Mentor | Calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
-
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="component">
+    <div class="container">
+      <header class="header">
+        <h1>
+          <span class="hidden">Calculator app</span>
+          <span>calc</span>
+        </h1>
+        <div class="theme-switcher / fs-small">
+          <div role="radiogroup" aria-label="select theme" class="theme-radios">
+            <h2>Theme</h2>
+            <div class="labels-wrapper">
+              <label for="theme-dark">1</label>
+              <label for="theme-light">2</label>
+              <label for="theme-purple">3</label>
+            </div>
+            <div class="switch-wrapper">
+              <span class="switch">
+                <span class="switch-radios">
+                  <input type="radio" id="theme-dark" value="dark" name="theme" checked />
+                  <input type="radio" id="theme-light" value="light" name="theme" />
+                  <input type="radio" id="theme-purple" value="purple" name="theme" />
+                </span>
+                <span aria-hidden="true" class="switch-background / bg-toggle">
+                  <span aria-hidden="true" class="switch-switcher / bg-accent"></span>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="calculator">
+        <div class="display / bg-screen calc-container clr-text-primary">
+          <span class="display-previous" data-previous></span>
+          <span class="display-current" data-current>
+            0
+          </span>
+        </div>
+        <div class="keys / bg-keypad fs-keys clr-text-secondary calc-container">
+          <button class="num-style" value="1" data-number>1</button>
+          <button class="num-style" value="2" data-number>2</button>
+          <button class="num-style" value="3" data-number>3</button>
+          <button class="num-style" value="4" data-number>4</button>
+          <button class="num-style" value="5" data-number>5</button>
+          <button class="num-style" value="6" data-number>6</button>
+          <button class="num-style" value="7" data-number>7</button>
+          <button class="num-style" value="8" data-number>8</button>
+          <button class="num-style" value="9" data-number>9</button>
+          <button class="num-style" value="0" data-number>0</button>
+          <button class="num-style" value="." data-number>.</button>
+          <button class="num-style" value="+" data-operator>+</button>
+          <button class="num-style" value="-" data-operator>&#8722;</button>
+          <button class="num-style" value="*" data-operator>&times;</button>
+          <button class="num-style" value="/" data-operator>&divide;</button>
+          <button class="func-style" value="Escape" data-function>
+            Reset
+          </button>
+          <button class="func-style" value="Delete" data-function>Del</button>
+          <button class="equals-style" value="Enter" data-function>=</button>
+        </div>
+      </main>
+    </div>
   </div>
 </body>
+
 </html>

@@ -1,0 +1,563 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+html {
+  height: -webkit-fill-available;
+  min-height: 100%;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  line-height: var(--lh-body);
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  --clr-theme1-main-bg: hsl(222, 26%, 31%);
+  --clr-theme1-keypad-bg: hsl(223, 31%, 20%);
+  --clr-theme1-screen-bg: hsl(224, 36%, 15%);
+  --clr-theme1-func-bg: hsl(225, 21%, 49%);
+  --clr-theme1-func-sh: hsl(224, 28%, 35%);
+  --clr-theme1-acc-bg: hsl(6, 63%, 50%);
+  --clr-theme1-acc-sh: hsl(6, 70%, 34%);
+  --clr-theme1-num-bg: hsl(30, 25%, 89%);
+  --clr-theme1-num-sh: hsl(28, 16%, 65%);
+  --clr-theme1-text-dark: hsl(221, 14%, 31%);
+  --clr-theme1-text-light: hsl(0, 0%, 100%);
+  --clr-theme2-main-bg: hsl(0, 0%, 90%);
+  --clr-theme2-keypad-bg: hsl(0, 5%, 81%);
+  --clr-theme2-screen-bg: hsl(0, 0%, 93%);
+  --clr-theme2-func-bg: hsl(185, 42%, 37%);
+  --clr-theme2-func-sh: hsl(185, 58%, 25%);
+  --clr-theme2-acc-bg: hsl(25, 98%, 40%);
+  --clr-theme2-acc-sh: hsl(25, 99%, 27%);
+  --clr-theme2-num-bg: hsl(45, 7%, 89%);
+  --clr-theme2-num-sh: hsl(35, 11%, 61%);
+  --clr-theme2-text-dark: hsl(60, 10%, 19%);
+  --clr-theme2-text-light: hsl(0, 0%, 100%);
+  --clr-theme3-main-bg: hsl(268, 75%, 9%);
+  --clr-theme3-keypad-bg: hsl(268, 71%, 12%);
+  --clr-theme3-screen-bg: hsl(268, 71%, 12%);
+  --clr-theme3-func-bg: hsl(281, 89%, 26%);
+  --clr-theme3-func-sh: hsl(285, 91%, 52%);
+  --clr-theme3-acc-bg: hsl(176, 100%, 44%);
+  --clr-theme3-acc-sh: hsl(177, 92%, 70%);
+  --clr-theme3-num-bg: hsl(268, 47%, 21%);
+  --clr-theme3-num-sh: hsl(290, 70%, 36%);
+  --clr-theme3-text-yellow: hsl(52, 100%, 62%);
+  --clr-theme3-text-blue: hsl(198, 20%, 13%);
+  --clr-theme3-text-white: hsl(0, 0%, 100%);
+  --clr-main-bg: var(--clr-theme1-main-bg);
+  --clr-keypad-bg: var(--clr-theme1-keypad-bg);
+  --clr-screen-bg: var(--clr-theme1-screen-bg);
+  --clr-toggle-bg: var(--clr-theme1-keypad-bg);
+  --clr-func-bg: var(--clr-theme1-func-bg);
+  --clr-func-sh: var(--clr-theme1-func-sh);
+  --clr-acc-bg: var(--clr-theme1-acc-bg);
+  --clr-acc-sh: var(--clr-theme1-acc-sh);
+  --clr-num-bg: var(--clr-theme1-num-bg);
+  --clr-num-sh: var(--clr-theme1-num-sh);
+  --clr-text-primary: var(--clr-theme1-text-light);
+  --clr-text-secondary: var(--clr-theme1-text-dark);
+  --clr-text-tertiary: var(--clr-theme1-text-light);
+  --fs-100: 0.75rem;
+  --fs-200: 0.875rem;
+  --fs-300: 0.9375rem;
+  --fs-400: 1rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.875rem;
+  --fs-700: 2rem;
+  --fs-800: 2.5rem;
+  --fs-900: 3.5rem;
+  --fs-body: var(--fs-400);
+  --fs-h1: var(--fs-600);
+  --fs-small: var(--fs-100);
+  --fs-footer: var(--fs-100);
+  --fs-display-current: var(--fs-800);
+  --fs-display-previous: var(--fs-500);
+  --fs-keys: var(--fs-600);
+  --fs-keys-func: var(--fs-500);
+  --lh-body: 1.2;
+  --ls-theme: 1px;
+  --ff-primary: "League Spartan", sans-serif;
+}
+
+@media (min-width: 40em) {
+  :root {
+    --fs-600: 1.75rem;
+    --fs-h1: var(--fs-700);
+    --fs-keys: var(--fs-800);
+    --fs-keys-func: var(--fs-600);
+    --fs-footer: var(--fs-300);
+    --fs-display-current: var(--fs-900);
+    --ls-display-current: -0.05rem;
+  }
+}
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  color: inherit;
+}
+
+a {
+  color: var(--clr-text-primary);
+}
+
+button:hover,
+.switch-switcher:hover {
+  filter: brightness(125%);
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.15);
+}
+
+a:focus,
+button:focus {
+  outline: 0.2rem solid var(--clr-text-primary);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  line-height: var(--lh-body);
+  background-color: var(--clr-main-bg);
+  font-size: var(--fs-body);
+  font-family: var(--ff-primary);
+  color: var(--clr-text-primary);
+  font-weight: 700;
+  transition: background-color 0.35s ease-in-out;
+}
+
+.container {
+  width: min(100% - 0.5rem, 33.8rem);
+  margin-inline: auto;
+}
+
+.component {
+  width: 100%;
+  min-width: 315px;
+  padding: 2rem 1rem;
+  flex: 1;
+}
+.component .container {
+  height: 100%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+.component .container * {
+  transition: background-color 0.35s ease-in-out;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 0 1.85rem;
+}
+.header h1 {
+  font-size: var(--fs-h1);
+  -webkit-margin-start: 0.5rem;
+          margin-inline-start: 0.5rem;
+}
+
+.header .theme-radios {
+  width: min(42.5%, 20rem);
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 4.5rem;
+  -moz-column-gap: 1.6rem;
+       column-gap: 1.6rem;
+  grid-template-areas: ". labels" "title switch";
+}
+.header .theme-radios h2 {
+  grid-area: title;
+  align-self: center;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: var(--ls-theme);
+  opacity: 0.9;
+}
+.header .theme-radios .labels-wrapper {
+  grid-area: labels;
+}
+.header .theme-radios .switch-wrapper {
+  grid-area: switch;
+}
+
+.header .labels-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 0.7rem 0.6rem;
+  margin-bottom: 0.2rem;
+}
+
+.header .switch-wrapper {
+  display: inline-block;
+  position: relative;
+  height: 1.625rem;
+}
+.header .switch-radios {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.header .switch-radios input[type=radio] {
+  display: inline-block;
+  opacity: 0;
+  width: 33%;
+  height: 100%;
+  z-index: 1;
+  cursor: pointer;
+}
+.header .switch-background {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0.3rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 100vmax;
+}
+.header .switch-switcher {
+  display: block;
+  height: 95%;
+  width: 1rem;
+  transform: translateX(0);
+  border-radius: 50%;
+  transition: transform 0.1s ease-out;
+  z-index: 2;
+}
+
+[data-theme=light] .switch-switcher {
+  transform: translateX(1.45rem);
+}
+
+[data-theme=purple] .switch-switcher {
+  transform: translateX(2.9rem);
+}
+
+.footer {
+  text-align: center;
+}
+
+.calculator {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-height: 35rem;
+}
+
+.calc-container {
+  padding-inline: 1.6rem;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0.2rem;
+  padding-block: 0.6rem;
+  border-radius: 0.7rem;
+  margin-bottom: 1.5rem;
+  text-align: right;
+}
+.display .display-current {
+  width: 100%;
+  height: 2.5rem;
+  line-height: 1;
+  font-size: var(--fs-display-current);
+  letter-spacing: var(--ls-display-current);
+}
+.display .display-previous {
+  width: 100%;
+  height: 1.5rem;
+  text-align: right;
+  line-height: 1;
+  font-size: var(--fs-display-previous);
+}
+
+.keys {
+  --br-keys: 0.3rem;
+  flex: 1;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, minmax(3rem, 1fr));
+  padding-block: 1.5rem;
+  gap: 0.8rem;
+  border-radius: 0.7rem;
+  grid-template-areas: "seven eight nine delete" "four five six add" "one two three subtract" "point zero divide multiply" "reset reset equals equals";
+}
+.keys button {
+  border-radius: var(--br-keys);
+  padding-top: 0.5rem;
+}
+.keys .num-style {
+  background-color: var(--clr-num-bg);
+  border-bottom: 0.25rem solid var(--clr-num-sh);
+}
+.keys .func-style {
+  font-size: var(--fs-keys-func);
+  text-transform: uppercase;
+  color: var(--clr-text-tertiary);
+  background-color: var(--clr-func-bg);
+  border-bottom: 0.25rem solid var(--clr-func-sh);
+}
+.keys button[value="1"] {
+  grid-area: one;
+}
+.keys button[value="2"] {
+  grid-area: two;
+}
+.keys button[value="3"] {
+  grid-area: three;
+}
+.keys button[value="4"] {
+  grid-area: four;
+}
+.keys button[value="5"] {
+  grid-area: five;
+}
+.keys button[value="6"] {
+  grid-area: six;
+}
+.keys button[value="7"] {
+  grid-area: seven;
+}
+.keys button[value="8"] {
+  grid-area: eight;
+}
+.keys button[value="9"] {
+  grid-area: nine;
+}
+.keys button[value="0"] {
+  grid-area: zero;
+}
+.keys button[value="."] {
+  grid-area: point;
+}
+.keys button[value="+"] {
+  grid-area: add;
+}
+.keys button[value="-"] {
+  grid-area: subtract;
+}
+.keys button[value="*"] {
+  grid-area: multiply;
+}
+.keys button[value="/"] {
+  grid-area: divide;
+}
+.keys button[value=Escape] {
+  grid-area: reset;
+}
+.keys button[value=Delete] {
+  grid-area: delete;
+}
+.keys button[value=Enter] {
+  grid-area: equals;
+  background-color: var(--clr-acc-bg);
+  color: var(--clr-text-tertiary);
+  border-bottom: 0.25rem solid var(--clr-acc-sh);
+  padding-block: 0.6rem;
+  font-size: calc(var(--fs-600) * 0.95);
+}
+
+[data-theme=light] {
+  --clr-main-bg: var(--clr-theme2-main-bg);
+  --clr-keypad-bg: var(--clr-theme2-keypad-bg);
+  --clr-screen-bg: var(--clr-theme2-screen-bg);
+  --clr-toggle-bg: var(--clr-theme2-keypad-bg);
+  --clr-func-bg: var(--clr-theme2-func-bg);
+  --clr-func-sh: var(--clr-theme2-func-sh);
+  --clr-acc-bg: var(--clr-theme2-acc-bg);
+  --clr-acc-sh: var(--clr-theme2-acc-sh);
+  --clr-num-bg: var(--clr-theme2-num-bg);
+  --clr-num-sh: var(--clr-theme2-num-sh);
+  --clr-text-primary: var(--clr-theme2-text-dark);
+  --clr-text-secondary: var(--clr-theme2-text-dark);
+  --clr-text-tertiary: var(--clr-theme2-text-light);
+}
+
+[data-theme=purple] {
+  --clr-main-bg: var(--clr-theme3-main-bg);
+  --clr-keypad-bg: var(--clr-theme3-keypad-bg);
+  --clr-screen-bg: var(--clr-theme3-screen-bg);
+  --clr-toggle-bg: var(--clr-theme3-keypad-bg);
+  --clr-func-bg: var(--clr-theme3-func-bg);
+  --clr-func-sh: var(--clr-theme3-func-sh);
+  --clr-acc-bg: var(--clr-theme3-acc-bg);
+  --clr-acc-sh: var(--clr-theme3-acc-sh);
+  --clr-num-bg: var(--clr-theme3-num-bg);
+  --clr-num-sh: var(--clr-theme3-num-sh);
+  --clr-text-primary: var(--clr-theme3-text-yellow);
+  --clr-text-secondary: var(--clr-theme3-text-white);
+  --clr-text-tertiary: var(--clr-theme3-text-blue);
+}
+[data-theme=purple] .num-style {
+  color: var(--clr-text-primary);
+}
+[data-theme=purple] .func-style {
+  color: var(--clr-text-secondary);
+}
+
+@media (min-width: 40em) {
+  .calc-container {
+    padding-inline: 2.05rem;
+  }
+  .calculator {
+    max-height: 39.5rem;
+  }
+  .calculator .display {
+    padding-block: 1.3rem 1.3rem;
+  }
+  .calculator .display .display-current {
+    height: 3rem;
+  }
+  .calculator .display input {
+    width: 100%;
+    text-align: right;
+    border: none;
+    font-size: var(--fs-display-current);
+  }
+  .calculator .keys {
+    --br-keys: 0.6rem;
+    gap: 1.5rem;
+    padding-block: 2rem;
+    grid-template-rows: repeat(5, 4rem);
+  }
+  .calculator .keys button[data-action=equals] {
+    padding-block: 0.7rem;
+  }
+}
+.wrapper {
+  margin-inline: auto;
+}
+
+.bg-keypad {
+  background-color: var(--clr-keypad-bg);
+}
+
+.bg-screen {
+  background-color: var(--clr-screen-bg);
+}
+
+.bg-toggle {
+  background-color: var(--clr-toggle-bg);
+}
+
+.bg-accent {
+  background-color: var(--clr-acc-bg);
+}
+
+.clr-text-primary {
+  color: var(--clr-text-primary);
+}
+
+.clr-text-secondary {
+  color: var(--clr-text-secondary);
+}
+
+.clr-text-tertiary {
+  color: var(--clr-text-tertiary);
+}
+
+.fs-small {
+  font-size: var(--fs-small);
+}
+
+.fs-footer {
+  font-size: var(--fs-footer);
+}
+
+.fs-keys {
+  font-size: var(--fs-keys);
+}
+
+.hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}/*# sourceMappingURL=main.css.map */
