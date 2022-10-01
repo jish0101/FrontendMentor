@@ -5,9 +5,11 @@ Recent porjects will have better code and different tech.
 
 Comments and suggestions can be sent via [@herojish](https://twitter.com/herojish)
 
-GitHub landing page: [https://jish0101.github.io/frontendmentor/](https://jish0101.github.io/frontendmentor/)
+GitHub landing page: [https://jish0101.github.io/FrontendMentor/](https://jish0101.github.io/FrontendMentor/)
 
 ## Projects
+
+7 -> [calculator-app-main](https://jish0101.github.io/FrontendMentor/calculator-app-main/)
 
 6 -> [todo-app-main](https://jish0101.github.io/FrontendMentor/todo-app-main/)
 
