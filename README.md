@@ -9,6 +9,8 @@ GitHub landing page: [https://jish0101.github.io/FrontendMentor/](https://jish01
 
 ## Projects
 
+7 -> [calculator-app-main](https://jish0101.github.io/FrontendMentor/calculator-app-main/)
+
 6 -> [todo-app-main](https://jish0101.github.io/FrontendMentor/todo-app-main/)
 
 5 -> [3-column-preview-card-component-main](https://jish0101.github.io/FrontendMentor/3-column-preview-card-component-main)
