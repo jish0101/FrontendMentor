@@ -15,7 +15,7 @@ html:focus-within {
 }
 
 html,
-body {
+body{
   height: 100%;
 }
 
@@ -25,14 +25,8 @@ li {
   list-style: none;
 }
 
-html {
-  height: -webkit-fill-available;
-  min-height: 100%;
-}
-
 body {
   text-rendering: optimizeSpeed;
-  line-height: var(--lh-body);
 }
 
 a:not([class]) {
@@ -50,16 +44,6 @@ canvas,
 svg {
   display: block;
   max-width: 100%;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
 }
 
 @media (prefers-reduced-motion: reduce) {
