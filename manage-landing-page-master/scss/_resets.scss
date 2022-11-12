@@ -16,17 +16,18 @@ html:focus-within {
 
 html,
 body{
-  height: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
 }
 
 ul,
-ol,
-li {
+ol{
   list-style: none;
 }
 
 body {
   text-rendering: optimizeSpeed;
+  line-height: 1.5;
 }
 
 a:not([class]) {
