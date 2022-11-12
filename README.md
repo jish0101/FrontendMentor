@@ -9,6 +9,8 @@ GitHub landing page: [https://jish0101.github.io/FrontendMentor/](https://jish01
 
 ## Projects
 
+8 -> [manage-landing-page-master](https://jish0101.github.io/FrontendMentor/manage-landing-page-master)
+
 7 -> [calculator-app-main](https://jish0101.github.io/FrontendMentor/calculator-app-main/)
 
 6 -> [todo-app-main](https://jish0101.github.io/FrontendMentor/todo-app-main/)
