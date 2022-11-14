@@ -21,14 +21,13 @@
     position: relative;
     margin: 11em 10em;
     margin-bottom: 3em; 
-    max-width: 35em;
+    max-width: 35.5em; /* 35 */
     border-radius: 2%;
     background: #ffffff;
     overflow: hidden;       
 }
 
 .img-container{
-
     background: url(../images/image-product-desktop.jpg);
     width: 50%;
     background-size: cover;
