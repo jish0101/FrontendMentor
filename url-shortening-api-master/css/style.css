@@ -251,6 +251,9 @@ body {
   width: 40ch;
   margin: .5rem 0;
 }
+.bg-image {
+  outline: 2px solid pink;
+}
 .bg-image::before {
   position: absolute;
   content: '';
@@ -276,11 +279,13 @@ body {
   .bg-image {
     order: -1;
     position: relative;
+    /* overflow-x: visible !important; */
   }
   .bg-image::before {
     width: min(100%, 25rem);
-    right: 0px;
-    background-position: 10px -10px;
+    right: 0;
+    top: 0;
+    /* background-position: 10px -50px; */
     background-size: cover;
   }
   .primary-section p {
