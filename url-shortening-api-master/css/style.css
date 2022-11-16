@@ -252,7 +252,7 @@ body {
   margin: .5rem 0;
 }
 .bg-image {
-  outline: 2px solid pink;
+  /* outline: 2px solid pink; */
 }
 .bg-image::before {
   position: absolute;
