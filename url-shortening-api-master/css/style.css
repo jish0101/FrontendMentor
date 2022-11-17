@@ -502,7 +502,57 @@ body {
 /* footer */
 
 .footer {
+  --logo-clr: white;
   background-color: var(--neutral-900);
+  padding-block: 4rem;
+}
+.footer-navigation {
+  display: flex;
+}
+.grid .even-columns {
+  grid-auto-columns: 1fr 1.5fr 1fr;
+}
+.col {
+  color: white;
+  margin-left: 2rem;
+}
+.col a {
+  font-size: var(--fs-500);
+}
+.col h4 {
+  font-size: var(--fs-550);
+  margin-bottom: 1rem;
+}
+.social-icons {
+  display: flex;
+  gap: 1.5rem;
+  margin-left: auto;
+}
+
+@media (max-width: 50em) {
+    .footer-navigation {
+      flex-direction: column;
+      gap: 1.75rem;
+      margin-right: 1.5rem;
+    }
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      margin-left: .75rem;
+    }
+    .col {
+      display: flex;
+      flex-direction: column;
+      gap: .75rem;
+    }
+    .col h4 {
+      margin-bottom: .5rem;
+    }
+    .social-icons {
+      padding-left: 1.25rem;
+      margin-inline: auto;
+      margin-top: .75rem;
+    }
 }
 
 /* UTILITY CLASSES */
