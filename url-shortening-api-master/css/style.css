@@ -584,7 +584,7 @@ body {
 }
 .col {
   color: white;
-  margin-left: 2rem;
+  margin-left: 4.5rem;
 }
 .col a {
   font-size: var(--fs-500);
