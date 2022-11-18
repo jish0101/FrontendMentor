@@ -60,9 +60,23 @@
     </section>
     <section class="url-section flow" style="--flow-spacer: 10rem">
       <div class="container url-container">
-        <input class="url-input" type="url" placeholder="Shorten a link here..." required>
-        <button class="btn" data-type="rectangle">Shorten It!</button>
+        <form action="submit" class="submit-url">
+          <input class="url-input" type="url" placeholder="Shorten a link here...">
+          <button class="btn" data-type="rectangle">Shorten It!</button>
+        </form>
       </div>
+    </section>
+
+    <!-- short url  -->
+
+    <section class="short-url">
+      <template id="linkTemplate">
+        <div class="container url">
+          <p class="long-link"></p>
+          <a class="link-to-url"></a>
+          <button class="copy-url-btn btn">Copy</button>
+        </div>
+      </template>
     </section>
   </main>
   <section class="featured-section text-center-sm-only">
@@ -147,22 +161,30 @@
           </div>
         </div>
         <div class="social-icons">
-          <svg width="25" height="25">
-            <use xlink:href="images/social-icons.svg#icon-facebook">
-            </use>
-          </svg>
-          <svg width="25" height="25">
-            <use xlink:href="images/social-icons.svg#icon-twitter">
-            </use>
-          </svg>
-          <svg width="25" height="25">
-            <use xlink:href="images/social-icons.svg#icon-pinterest">
-            </use>
-          </svg>
-          <svg width="25" height="25">
-            <use xlink:href="images/social-icons.svg#icon-instagram">
-            </use>
-          </svg>
+          <a href="">
+            <svg width="25" height="25">
+              <use xlink:href="images/social-icons.svg#icon-facebook">
+              </use>
+            </svg>
+          </a>
+          <a href="">
+            <svg width="25" height="25">
+              <use xlink:href="images/social-icons.svg#icon-twitter">
+              </use>
+            </svg>
+          </a>
+          <a href="">
+            <svg width="25" height="25">
+              <use xlink:href="images/social-icons.svg#icon-pinterest">
+              </use>
+            </svg>
+          </a>
+          <a href="">
+            <svg width="25" height="25">
+              <use xlink:href="images/social-icons.svg#icon-instagram">
+              </use>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
