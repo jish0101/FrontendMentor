@@ -613,12 +613,13 @@ body {
   .footer-navigation {
     flex-direction: column;
     gap: 1.75rem;
-    margin-right: 1.5rem;
+    margin-right: 4.5rem;
   }
   .logo-container {
     display: flex;
     justify-content: center;
     margin-left: 0.75rem;
+    margin-bottom: 0.5rem;
   }
   .col {
     display: flex;
@@ -629,7 +630,6 @@ body {
     margin-bottom: 0.5rem;
   }
   .social-icons {
-    padding-left: 1.25rem;
     margin-inline: auto;
     margin-top: 0.75rem;
   }
