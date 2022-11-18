@@ -574,7 +574,7 @@ body {
   --logo-clr: white;
   background-color: var(--neutral-900);
   padding-block: 4rem;
-  padding-bottom: 6rem;
+  padding-bottom: 6.5rem;
 }
 .footer-navigation {
   display: flex;
