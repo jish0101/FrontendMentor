@@ -579,7 +579,7 @@ body {
   display: flex;
 }
 .grid .even-columns {
-  grid-auto-columns: 1fr 1.5fr 1fr;
+  grid-auto-columns: 1fr 1fr 1fr;
 }
 .col {
   color: white;
