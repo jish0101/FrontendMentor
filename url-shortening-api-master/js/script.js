@@ -23,9 +23,17 @@ const handleSubmit = document.querySelector(".submit-url");
 
 const shortUrlSection = document.querySelector(".short-url");
 
-const urlContainer = document.querySelector('.url-container');
+const urlContainer = document.querySelector(".url-container");
 
-const urlInput = document.querySelector('.url-input');
+const urlInput = document.querySelector(".url-input");
+
+window.onload = function () {
+  let lsLinks = localStorage.getItem("url");
+  lsLinks = JSON.parse(lsLinks);
+  if (lsLinks.longLink) {
+    createUrlContainer(lsLinks.longLink, lsLinks.shortLink, false);
+  }
+}
 
 handleSubmit.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -36,7 +44,9 @@ const submit = async () => {
   if (longLink.value !== "") {
     const shortUrl = await getShortUrl(longLink);
     if (shortUrl) {
-      createUrlContainer(shortUrl);
+      let longUrl = longLink.value;
+      longLink.value = '';
+      createUrlContainer(longUrl, shortUrl, true);
     } else {
       showError(true);
     }
@@ -66,14 +76,14 @@ const getShortUrl = async (longLink) => {
   }
 };
 
-const createUrlContainer = (shortUrl) => {
+const createUrlContainer = (longLink, shortUrl, boolean) => {
+  if(boolean === true) {updateLocalStorage(longLink, shortUrl);}
   const container = document.importNode(linkTemplate.content, true);
   const urlPara = container.querySelector(".long-link");
-  urlPara.innerText = longLink.value;
+  urlPara.innerText = longLink;
   const linkToUrl = container.querySelector(".link-to-url");
   linkToUrl.setAttribute("href", `${shortUrl}`);
   linkToUrl.textContent = shortUrl;
-  longLink.value = "";
   const copyUrlBtn = container.querySelector(".copy-url-btn");
   copyUrlBtn.addEventListener("click", () => {
     copyText(shortUrl);
@@ -101,4 +111,13 @@ const copyText = async (text) => {
       btn.innerText = "Copied!";
     });
   });
+};
+
+const updateLocalStorage = (longLink, shortUrl) => {
+  const urlObj = {
+    longLink: longLink,
+    shortLink: shortUrl,
+  };
+  const obj = JSON.stringify(urlObj)
+  localStorage.setItem("url", obj);
 };
