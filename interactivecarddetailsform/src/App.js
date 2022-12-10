@@ -1,8 +1,11 @@
 import Form from "./Form";
-import Card from "./Card";
+import "./index.css"
 
 function App() {
-  return <h1>Hello</h1>;
+  return (
+    <div className="even-column">
+      <Form />
+    </div>
+  )
 }
-
 export default App;
