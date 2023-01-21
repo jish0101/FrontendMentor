@@ -38,21 +38,22 @@
   <!-- main-description-section -->
 
   <main>
-    <section>
+    <section class="bg-img">
       <div class="container">
-        <div class="even-columns">
-          <div>
+        <div class="even-columns margin-block" style="--margin-block:2rem;">
+          <div class="flow padding-block text-center-sm" style="--flow-spacer: 1.25rem; --padding-block: 4rem;">
             <h1 class="primary-heading">
               A Simple Boookmark Manager
             </h1>
-            <p data-width="wide">
+            <p data-width="wide" class="margin-block" style="--margin-block: 1rem;">
               A clean and simple interface to organize your favourite websites. Open a new
               browser tab and see your sites load instantly. Try it for free.
             </p>
             <button class="btn">Get it on Chrome</button>
-            <button class="btn" data-type="light">Get it on Firefox</button>
+            <button class="btn margin-inline" data-type="light">Get it on Firefox</button>
           </div>
-          <div class="bg-image-container"></div>
+          <div class="bg-img-container">
+          </div>
         </div>
       </div>
     </section>
@@ -61,7 +62,7 @@
   <!-- Feature-section -->
 
   <section class="feature-section">
-    <div class="container text-center">
+    <div class="container flow text-center padding-block">
       <h2 class="secondary-heading">Features</h2>
       <p class="mx-auto" data-width="wide">Our aim is to make it quick and easy for you to access your
         favourite websites. Your bookmarks sync between your devices
@@ -69,21 +70,29 @@
       </p>
     </div>
     <div class="feature-wrapper">
-      <div class="feature-tabs text-center">
-        <a href="" class="tab">
-          Simple Bookmarking
-        </a>
-        <a href="" class="tab">
-          Speedy Searching
-        </a>
-        <a href="" class="tab">
-          Easy Sharing
-        </a>
+      <div class="feature-links">
+        <ul class="tabs text-center">
+          <li class="tab active-tab">
+            <a href="">
+              Simple Bookmarking
+            </a>
+          </li>
+          <li class="tab">
+            <a href="">
+              Speedy Searching
+            </a>
+          </li>
+          <li class="tab">
+            <a href="">
+              Easy Sharing
+            </a>
+          </li>
+        </ul>
       </div>
-      <div class="container">
-        <div class="even-columns">
+      <div class="container" data-activ-tab="true">
+        <div class="even-columns text-center-sm">
           <div class="tab1-bg-img"></div>
-          <div class="tab1-content">
+          <div class="tab1-content flow padding-block" style="--padding-block: 2rem; --flow-spacer: 1em;">
             <h2 class="secondary-heading">Bookmark in one click</h2>
             <p>Organize your bookmarks however you like. Our simple drag-and-drop interface
               gives you complete control over how you manage your favourite sites.
@@ -92,7 +101,7 @@
           </div>
         </div>
       </div>
-      <div class="container">
+      <div class="container visually-hidden" data-activ-tab="false">
         <div class="even-columns">
           <div class="tab2-bg-img"></div>
           <div class="tab2-content">
@@ -104,7 +113,7 @@
           </div>
         </div>
       </div>
-      <div class="container">
+      <div class="container visually-hidden" data-activ-tab="false">
         <div class="even-columns">
           <div class="tab3-bg-img"></div>
           <div class="tab3-content">
