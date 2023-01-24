@@ -1,0 +1,52 @@
+.bm__download{
+    margin: 15rem 0 10rem 0;
+    /* margin-bottom: 10rem; */
+}
+
+.bm__download_container {
+    max-width: 36rem;
+}
+
+.bm__download_container h2 {
+    margin-bottom: 1rem;
+}
+
+.bm__download_cards {
+    margin-top: 5rem;
+    display: flex;
+    height: 28rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.bm__download_cards .bm__card:first-child {
+    align-self: start;
+}
+
+.bm__download_cards .bm__card:last-child {
+    align-self: end;
+}
+
+@media screen and (max-width: 50em) {
+    .bm__download {
+        margin-block: 6rem;
+    }
+
+    .bm__download_cards {
+        flex-direction: column;
+        margin-top: 1rem;
+        height: auto;
+    }
+
+    .bm__download_cards .bm__card {
+        margin-top: 3rem;
+    }
+
+    .bm__download_cards .bm__card:first-child {
+        align-self: center;
+    }
+    
+    .bm__download_cards .bm__card:last-child {
+        align-self: center;
+    }
+}

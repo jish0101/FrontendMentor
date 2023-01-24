@@ -1,0 +1,101 @@
+.bm__cta {
+  --flow-spacer: 1rem;
+  background-color: var(--accent-100);
+  padding-block: 4rem;
+  margin-top: 5rem;
+  color: white;
+}
+
+.bm__cta h2 {
+  color: inherit;
+  margin-top: 1.75rem;
+}
+
+.bm__cta span {
+  letter-spacing: 5px;
+  font-size: var(--fs-200);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.bm__cta input {
+  flex: 1;
+  padding: 0.75rem;
+  margin-right: 0.5rem;
+  font-size: var(--fs-300);
+  text-indent: 0.5rem;
+  border-radius: 5px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border: 0;
+}
+
+.bm__cta button {
+  padding: 0.75rem 1.25rem;
+}
+
+.bm__cta_container {
+  max-width: 32rem;
+}
+
+.bm__cta_contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  position: relative;
+}
+
+.error-show {
+  outline: 2px solid var(--accent-200);
+}
+
+.error-msg {
+  position: absolute;
+  content: "";
+  bottom: -24px;
+  left: -2px;
+  text-align: start;
+  text-indent: 15px;
+  padding-block: 0.25rem;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  width: calc(100% - 8.15rem);
+  background-color: var(--accent-200);
+  color: white;
+  font-size: 10px !important;
+  font-weight: normal !important;
+  font-style: italic;
+  letter-spacing: normal !important;
+  text-transform: initial !important;
+}
+
+@media screen and (max-width: 50em) {
+  .bm__cta h2 {
+    margin: 1.25rem 0;
+    font-size: var(--fs-500);
+  }
+
+  .bm__cta_container {
+    padding: 0 2rem;
+  }
+
+  .bm__cta_contact {
+    flex-direction: column;
+  }
+
+  .bm__cta_contact input {
+    width: 100%;
+    margin: 0;
+  }
+
+  .bm__cta_contact button {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .error-msg {
+    width: calc(100% + 3.5px);
+    bottom: 52px;
+    left: -2px;
+  }
+}

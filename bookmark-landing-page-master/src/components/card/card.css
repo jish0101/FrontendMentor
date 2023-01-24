@@ -1,0 +1,31 @@
+.bm__card {
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-inline: 1rem;
+  padding: 2rem 0.5rem;
+  box-shadow: 0px 5px 15px 0px rgba(178, 215, 231, 0.457);
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(178, 215, 231, 0.457);
+  -moz-box-shadow: 0px 5px 15px 0px rgba(178, 215, 231, 0.457);
+}
+
+.bm__card-heading {
+  font-size: var(--fs-500);
+  font-weight: 500;
+  color: var(--neutral-200);
+  margin-top: 2rem;
+}
+
+.bm__card-sub-heading {
+  margin-bottom: 1.75rem;
+  font-size: var(--fs-300);
+}
+
+.bm__card button {
+  margin-top: 1.25rem;
+  padding: 1rem 2.25rem;
+}

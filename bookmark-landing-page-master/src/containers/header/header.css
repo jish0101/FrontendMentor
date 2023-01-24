@@ -1,0 +1,71 @@
+.App {
+    position: relative;
+    overflow: hidden;
+}
+.bm__header {
+    margin-top: 3rem;
+    padding: 3rem 0;
+    align-items: center;
+}
+
+.bm__header::after {
+    content: '';
+    position: absolute;
+    width: 90rem;
+    height: 20rem;
+    background-color: var(--accent-100);
+    border-radius: 100vmin;
+    transform: translate(50%, 30%);
+    z-index: -1;
+}
+
+.bm__header_container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+}
+
+.bm__header_container button {
+    margin: 1.25rem 1.25rem 0 0;
+    padding: .8rem 1.25rem;
+}
+
+.bm__header_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bm__header_image img {
+    width: 100%;
+}
+
+@media screen and (max-width: 50em) {
+    .bm__header {
+        margin-top: 0rem;
+        padding: 0;
+        align-items:unset
+    }
+    .bm__header::after {
+        width: 200%;
+        height: 12rem;
+        transform: translate(10%, 60%);
+    }
+    .bm__header_container {
+        padding-inline: .3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+    }
+    .bm__header_container div button {
+        margin: 0;
+        margin: 1.5rem .5rem;
+        font-size: var(--fs-200);
+        padding: .75rem 1.25rem;
+    }
+    .bm__header_image{
+        order: -1;
+    }
+}
