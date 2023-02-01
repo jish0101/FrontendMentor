@@ -9,7 +9,7 @@ GitHub landing page: [https://jish0101.github.io/FrontendMentor/](https://jish01
 
 ## Projects
 
-12 -> [react-Todo-App](https://jish0101.github.io/react-todo-app-v2/)
+12 -> [react-Todo-App](https://github.com/jish0101/react-todo-app-v2) - [Link to live site](https://jish0101.github.io/react-todo-app-v2/) This is the React version of Project Number 6.
 
 11 -> [react-bookmark-app](https://github.com/jish0101/react-bookmark-app) [Link to live site](https://jish0101.github.io/react-bookmark-app/)
 
