@@ -9,6 +9,8 @@ GitHub landing page: [https://jish0101.github.io/FrontendMentor/](https://jish01
 
 ## Projects
 
+12 -> [react-Todo-App](https://jish0101.github.io/react-todo-app-v2/)
+
 11 -> [react-bookmark-app](https://github.com/jish0101/react-bookmark-app) [Link to live site](https://jish0101.github.io/react-bookmark-app/)
 
 10 -> [interactivecreditcard](https://github.com/jish0101/FrontendMentor-React-js/tree/main/interactive-card-component) [Link to live site](https://jish0101.github.io/FrontendMentor-React-js/)
