@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/todo-list-responsive-and-darklight-mode-rg0ZwlaGhp)
-- Live Site URL: [Add live site URL here](https://jish0101.github.io/FrontendMentor/todo-app-main/)
+- Solution URL: [solution URL](https://www.frontendmentor.io/solutions/todo-list-responsive-and-darklight-mode-rg0ZwlaGhp)
+- Live Site URL: [live site URL](https://jish0101.github.io/FrontendMentor/todo-app-main/)
 
 ## My process
 
@@ -64,4 +64,4 @@ Youtube!
 
 - Website - [Jishan Ahmad]()
 - Frontend Mentor - [@jish0101](https://www.frontendmentor.io/profile/jish0101)
-- Twitter - [@herJish](https://www.twitter.com/yourusername)
+- Twitter - [@heroJish](https://www.twitter.com/herojish)
