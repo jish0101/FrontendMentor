@@ -91,14 +91,14 @@ function renderTodo(taskElement) {
   updateLS();
   newTaskInput.value = "";
 
-  const deleteTodo = document.querySelectorAll('.deleteTodo');
+  const deleteTodo = document.querySelectorAll(".deleteTodo");
   console.log(deleteTodo);
-  
-deleteTodo.forEach(cross => {
-  cross.addEventListener("click", () => {
-    clearTodo(cross);
+
+  deleteTodo.forEach((cross) => {
+    cross.addEventListener("click", () => {
+      clearTodo(cross);
+    });
   });
-});
 
   const labels = document.querySelectorAll("[data-label]");
   if (document.body.classList.contains("body-dark")) {
@@ -107,8 +107,8 @@ deleteTodo.forEach(cross => {
         label.classList.add("dark-label-font");
       });
     }
-    const task = document.querySelectorAll('.task');
-    task.forEach(task => {
+    const task = document.querySelectorAll(".task");
+    task.forEach((task) => {
       task.classList.add("task-dark");
     });
   } else {
@@ -122,6 +122,8 @@ function func(check) {
   check.addEventListener("click", () => {
     check.classList.toggle("checked");
     updateLS();
+    const filterActive = document.querySelector(".active-filter");
+    filterLogic(filterActive);
   });
 }
 
@@ -140,7 +142,7 @@ function updateLS() {
       completed: checked.classList.contains("checked"),
     });
   });
-  if (document.body.classList.contains("body-dark")){
+  if (document.body.classList.contains("body-dark")) {
     localStorage.setItem("darkMode", "true");
   } else {
     localStorage.setItem("darkMode", "false");
@@ -150,7 +152,6 @@ function updateLS() {
 }
 
 function itemRemainingCount() {
-  let incompleteTask = 0;
   const todosEl = document.querySelectorAll(".task");
   const checked = document.querySelectorAll(".checked");
   let totalTask = todosEl.length;
@@ -158,7 +159,7 @@ function itemRemainingCount() {
   let itemRemainingc = totalTask - completedTask;
   itemRemaining.innerText = `${itemRemainingc} ${
     itemRemainingc < 2 ? "item" : "items"
-    } left`;
+  } left`;
 }
 
 darkModeToggle.addEventListener("click", () => {
@@ -184,21 +185,20 @@ function enableDarkMode() {
   todoHead.classList.toggle("todo-head-dark");
   todoList.classList.toggle("todo-new-list-dark");
   newTaskInput.classList.toggle("todo-new-list-dark");
-  const btn = document.querySelector('.btn-task');
+  const btn = document.querySelector(".btn-task");
   btn.classList.toggle("btn-task-dark");
   darkModeToggle.classList.toggle("todo-dark-mode-dark");
-  const task = document.querySelectorAll('.task');
-  task.forEach(task => {
+  const task = document.querySelectorAll(".task");
+  task.forEach((task) => {
     task.classList.toggle("task-dark");
   });
 }
 
 function filters(e) {
-  const allfilter = document.querySelectorAll('.filter-list-item');
+  const allfilter = document.querySelectorAll(".filter-list-item");
   if (e.target.classList.contains("filter-list-item")) {
-    allfilter.forEach(filter => {
-      filter.classList.remove("active-filter")
-      filterLogic(e.target);
+    allfilter.forEach((filter) => {
+      filter.classList.remove("active-filter");
     });
     e.target.classList.add("active-filter");
     filterLogic(e.target);
@@ -210,31 +210,31 @@ filter.addEventListener("click", (e) => {
 });
 
 function filterLogic(object) {
-  const task = document.querySelectorAll('.task');
+  const task = document.querySelectorAll(".task");
   if (task) {
     if (object.innerText === "All") {
-      task.forEach(task => {
-        task.classList.remove("hide")
+      task.forEach((task) => {
+        task.classList.remove("hide");
       });
     } else if (object.innerText === "Active") {
-      const unactive = document.querySelectorAll('.checked');
-      task.forEach(object => {
+      const unactive = document.querySelectorAll(".checked");
+      task.forEach((object) => {
         object.classList.remove("hide");
-      })
+      });
       if (unactive) {
-        unactive.forEach(object => {
+        unactive.forEach((object) => {
           object.parentNode.classList.add("hide");
-        })
+        });
       }
     } else if (object.innerText === "Completed") {
-      const unactive = document.querySelectorAll('.checked')
-      task.forEach(object => {
+      const unactive = document.querySelectorAll(".checked");
+      task.forEach((object) => {
         object.classList.add("hide");
-      })
+      });
       if (unactive) {
-        unactive.forEach(object => {
+        unactive.forEach((object) => {
           object.parentNode.classList.remove("hide");
-        })
+        });
       }
     }
   }
