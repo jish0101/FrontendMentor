@@ -10,6 +10,8 @@ My Portfolio => [https://jish-d-ahmad.web.app/](https://jish-d-ahmad.web.app/)
 GitHub landing page => [https://jish0101.github.io/FrontendMentor/](https://jish0101.github.io/FrontendMentor/)
 
 ## Projects
+14- [gym-react-typescript](https://github.com/jish0101/gym-typescript) - [Link to live site](https://jish0101.github.io/gym-typescript/)
+
 13 -> [react-Todo-App-firebase](https://github.com/jish0101/todo-app-v3) - [Link to live site](https://todo-app-v3-2b16b.web.app/)
 
 12 -> [react-Todo-App](https://github.com/jish0101/react-todo-app-v2) - [Link to live site](https://jish0101.github.io/react-todo-app-v2/) This is the React version of Project Number 6.
